@@ -49,3 +49,21 @@ vim.keymap.set('n','<leader>sv',':source $MYVIMRC<cr>')
 vim.keymap.set('n','<leader>ss',':source %<cr>')
 --使用正常的正则表达式
 vim.keymap.set('n','/','/\\v')
+
+--主題設置
+if vim.fn.has('termguicolors')~=0 then
+    vim.o.termguicolors=true
+end
+vim.o.background='dark'
+vim.g.everforest_background='soft'
+vim.g.everforest_better_performance=1
+vim.cmd('colorscheme everforest')
+
+--plugin
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'sainnhe/everforest' 
+end)
