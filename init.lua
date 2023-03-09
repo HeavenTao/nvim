@@ -66,6 +66,12 @@ vim.keymap.set('n','<leader>fg',builtin.live_grep,{})
 vim.keymap.set('n','<leader>fb',builtin.buffers,{})
 vim.keymap.set('n','<leader>fh',builtin.help_tags,{})
 
+-- coc-explorer
+vim.keymap.set('n','<leader>n',':CocCommand explorer<cr>')
+
+--coc-nvim
+
+
 --plugin
 vim.cmd [[packadd packer.nvim]]
 
