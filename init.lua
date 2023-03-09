@@ -57,7 +57,14 @@ end
 vim.o.background='dark'
 vim.g.everforest_background='soft'
 vim.g.everforest_better_performance=1
-vim.cmd('colorscheme everforest')
+vim.cmd.colorscheme('everforest')
+
+--telescopt.nvim
+local builtin=require('telescope.builtin')
+vim.keymap.set('n','<leader>f',builtin.find_files,{})
+vim.keymap.set('n','<leader>fg',builtin.live_grep,{})
+vim.keymap.set('n','<leader>fb',builtin.buffers,{})
+vim.keymap.set('n','<leader>fh',builtin.help_tags,{})
 
 --plugin
 vim.cmd [[packadd packer.nvim]]
@@ -65,5 +72,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'neoclide/coc.nvim', branch = 'release'}
-    use 'sainnhe/everforest' 
+    use 'sainnhe/everforest'
+    use {
+        'nvim-telescope/telescope.nvim',tag='0.1.1',
+        requires={{'nvim-lua/plenary.nvim'}}
+    }
+    use 'nvim-tree/nvim-web-devicons'
 end)
