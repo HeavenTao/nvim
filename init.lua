@@ -9,11 +9,8 @@ require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-tree/nvim-web-devicons'
+    use '/usr/local/src/v-trans/'
 end)
-
-if packer_bootstrap == false then
-    return
-end
 
 --使用+寄存器
 vim.opt.clipboard:append { 'unnamedplus' }
@@ -124,3 +121,7 @@ end
 vim.keymap.set('n', 'K', '<CMD>lua _G.show_docs()<cr>', { silent = true })
 
 vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
+
+--Translator
+vim.keymap.set('n', '<leader>t', ':call VTrans()<CR>')
+vim.keymap.set('v', '<leader>t', ':call VTransV()<CR>')
