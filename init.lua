@@ -1,3 +1,15 @@
+--plugin
+require('packer').startup(function(use)
+    use 'wbthomason/packer.nvim'
+    use {'neoclide/coc.nvim', branch = 'release'}
+    use 'sainnhe/everforest'
+    use {
+        'nvim-telescope/telescope.nvim',tag='0.1.1',
+        requires={{'nvim-lua/plenary.nvim'}}
+    }
+    use 'nvim-tree/nvim-web-devicons'
+end)
+
 --使用+寄存器
 vim.opt.clipboard:append{'unnamedplus'}
 --高亮查找
@@ -72,16 +84,3 @@ vim.keymap.set('n','<leader>n',':CocCommand explorer<cr>')
 --coc-nvim
 
 
---plugin
-vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-    use {'neoclide/coc.nvim', branch = 'release'}
-    use 'sainnhe/everforest'
-    use {
-        'nvim-telescope/telescope.nvim',tag='0.1.1',
-        requires={{'nvim-lua/plenary.nvim'}}
-    }
-    use 'nvim-tree/nvim-web-devicons'
-end)
