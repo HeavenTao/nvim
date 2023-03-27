@@ -9,6 +9,9 @@ require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-tree/nvim-web-devicons'
+    use { "akinsho/toggleterm.nvim", tag = "*", config = function()
+        require("toggleterm").setup()
+    end }
     use '/usr/local/src/v-trans/'
 end)
 
@@ -119,7 +122,6 @@ function _G.show_docs()
 end
 
 vim.keymap.set('n', 'K', '<CMD>lua _G.show_docs()<cr>', { silent = true })
-
 vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
 
 --Translator
