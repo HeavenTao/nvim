@@ -1,5 +1,4 @@
 --plugin
-
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { 'neoclide/coc.nvim', branch = 'release' }
@@ -9,9 +8,11 @@ require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'nvim-tree/nvim-web-devicons'
-    use { "akinsho/toggleterm.nvim", tag = "*", config = function()
-        require("toggleterm").setup()
-    end }
+    use 'akinsho/toggleterm.nvim'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     use '/usr/local/src/v-trans/'
 end)
 
@@ -127,3 +128,41 @@ vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
 --Translator
 vim.keymap.set('n', '<leader>t', ':call VTrans()<CR>')
 vim.keymap.set('v', '<leader>t', ':call VTransV()<CR>')
+
+--toggleterm
+require('toggleterm').setup {
+    size = 20,
+    open_mapping = [[<c-\>]],
+    hide_numbers = true,
+    shade_filetypes = {},
+    shade_terminals = false,
+    shading_factor = 2,
+    start_in_insert = true,
+    insert_mappings = false,
+    persist_size = true,
+    direction = "float",
+    close_on_exit = true,
+    float_opts = {
+        border = "curved",
+        winblend = 0,
+        highlights = {
+            border = "Normal",
+            background = "Normal",
+        },
+    }
+}
+
+--lualine
+require('lualine').setup {
+    options = {
+        section_separators = { left = '', right = '' },
+        sections = {
+            lualine_a = { 'mode' },
+            lualine_b = { 'branch', 'diff', 'diagnostics' },
+            lualine_c = { 'filename' },
+            lualine_x = { 'encoding', 'filetype' },
+            lualine_y = { 'progress' },
+            lualine_z = { 'location' }
+        }
+    }
+}
