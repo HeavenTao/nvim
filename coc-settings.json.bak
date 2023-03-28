@@ -3,5 +3,6 @@
     "explorer.icon.source": "nvim-web-devicons",
     "explorer.position": "right",
     "explorer.toggle": false,
-    "coc.preferences.formatOnSave": true
+    "coc.preferences.formatOnSave": true,
+    "sumneko-lua.enableNvimLuaDev": true
 }
