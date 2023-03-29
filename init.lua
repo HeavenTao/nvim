@@ -13,6 +13,7 @@ require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use 'preservim/nerdcommenter'
     use '/usr/local/src/v-trans/'
 end)
 
@@ -126,8 +127,8 @@ vim.keymap.set('n', 'K', '<CMD>lua _G.show_docs()<cr>', { silent = true })
 vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
 
 --Translator
-vim.keymap.set('n', '<leader>t', ':call VTrans()<CR>')
-vim.keymap.set('v', '<leader>t', ':call VTransV()<CR>')
+vim.keymap.set('n', '<leader>t', ':lua VTrans()<CR>')
+vim.keymap.set('v', '<leader>t', ':lua VTransV()<CR>')
 
 --toggleterm
 require('toggleterm').setup {
