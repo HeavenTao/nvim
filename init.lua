@@ -165,3 +165,7 @@ vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
 --Translator
 vim.keymap.set('n', '<leader>t', ':lua VTrans()<CR>')
 vim.keymap.set('v', '<leader>t', ':lua VTransV()<CR>')
+
+--Copilot
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("<CR>")', { expr = true, noremap = true })
+vim.g.copilot_no_tab_map = true
