@@ -18,6 +18,7 @@ vim.o.shiftwidth = 4
 vim.o.smartindent = true
 --
 vim.o.expandtab = true
+vim.o.autoindent = true
 --
 vim.o.encoding = 'UTF-8'
 --设置鼠标所在行高亮

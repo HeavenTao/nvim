@@ -20,3 +20,5 @@ vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<cr>')
 vim.keymap.set('n', '<leader>ss', ':source %<cr>')
 --使用正常的正则表达式
 vim.keymap.set('n', '/', '/\\v')
+--使用4个空格代替tab
+vim.keymap.set('i', '<Tab>', '    ')
