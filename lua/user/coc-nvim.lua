@@ -1,4 +1,4 @@
-vim.g.coc_global_extensions = { "coc-vimlsp", "coc-json", "coc-explorer", "coc-sumneko-lua", "coc-pyright" }
+vim.g.coc_global_extensions = { "coc-vimlsp", "coc-json", "coc-explorer", "coc-sumneko-lua", "coc-pyright", "coc-pairs" }
 vim.g.coc_config_home = '~/.config/coc/'
 vim.opt.backup = false
 vim.opt.writebackup = false
