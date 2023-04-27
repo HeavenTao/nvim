@@ -23,4 +23,5 @@ return require('packer').startup(function(use)
     use 'preservim/nerdcommenter'
     use '/usr/local/src/v-trans/'
     use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
+    use 'mhinz/vim-startify'
 end)
