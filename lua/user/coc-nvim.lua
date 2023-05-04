@@ -12,7 +12,7 @@ end
 local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
 vim.keymap.set('i', "<C-j>", 'coc#pum#visible()?coc#pum#next(1) : v:lua.check_back_space() ? "TAB" : coc#refresh()', opts)
 vim.keymap.set('i', '<C-k>', [[coc#pum#visible()?coc#pum#prev(1):"\<C-h>"]], opts)
-vim.keymap.set('i', '<CR>', [[coc#pum#visible()?coc#pum#confirm():"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+vim.keymap.set('i', '<TAB>', [[coc#pum#visible()?coc#pum#confirm():"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 vim.keymap.set('n', "[g", "<Plug>(coc-diagnostic-prev)", { silent = true })
 vim.keymap.set('n', ']g', "<Plug>(coc-diagnostic-next)", { silent = true })
 
@@ -34,3 +34,8 @@ end
 
 vim.keymap.set('n', 'K', '<CMD>lua _G.show_docs()<cr>', { silent = true })
 vim.keymap.set('n', '<leader>rn', '<Plug>(coc-rename)', { silent = true })
+
+vim.keymap.set("i", "<C-f>", 'coc#float#has_scroll()?"<c-r>=coc#float#scroll(1)<cr>":"<Right>"',
+    { silent = true, noremap = true, expr = true, replace_keycodes = false })
+vim.keymap.set("i", "<C-b>", 'coc#float#has_scroll()?"<c-r>=coc#float#scroll(0)<cr>":"<Left>"',
+    { silent = true, noremap = true, expr = true, replace_keycodes = false })

@@ -13,7 +13,7 @@ vim.keymap.set('n', '<S-W>', '<C-W>W', { silent = true })
 --保存
 vim.keymap.set('n', '<leader>w', ':w<cr>')
 --编辑配置文件
-vim.keymap.set('n', '<leader>ev', ':100vsplit $MYVIMRC<cr>')
+vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<cr>')
 --加载配置文件
 vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<cr>')
 --加载当前文件
