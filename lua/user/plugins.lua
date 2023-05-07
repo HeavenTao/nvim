@@ -7,7 +7,8 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { 'neoclide/coc.nvim', branch = 'release' }
-    use 'sainnhe/everforest'
+    --use 'sainnhe/everforest'
+    use 'folke/tokyonight.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }

@@ -5,4 +5,9 @@ end
 vim.o.background = 'dark'
 vim.g.everforest_background = 'soft'
 vim.g.everforest_better_performance = 1
-vim.cmd.colorscheme('everforest')
+--vim.cmd.colorscheme('everforest')
+vim.cmd.colorscheme('tokyonight')
+
+require('tokyonight').setup({
+    style = 'night'
+})
