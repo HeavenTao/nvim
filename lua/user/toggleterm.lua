@@ -1,5 +1,5 @@
 require('toggleterm').setup {
-    size = 20,
+    size = 10,
     open_mapping = [[<c-\>]],
     insert_mappings = true,
     terminal_mappings = true,
@@ -9,8 +9,10 @@ require('toggleterm').setup {
     shading_factor = 2,
     start_in_insert = true,
     persist_size = true,
-    direction = "float",
+    persist_mode = true,
+    direction = "horizontal",
     close_on_exit = true,
+    auto_scroll = true,
     float_opts = {
         border = "curved",
         winblend = 0,
