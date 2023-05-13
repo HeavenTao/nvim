@@ -6,6 +6,7 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 --显示行号
 vim.o.number = true
+vim.o.relativenumber = true
 --查找忽略大小写
 vim.o.ignorecase = true
 --
