@@ -1,9 +1,3 @@
---网络环境不好时，取消注释
---require('packer').init({
---git = {
---clone_timeout = 1200
---}
---})
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use { 'neoclide/coc.nvim', branch = 'release' }
