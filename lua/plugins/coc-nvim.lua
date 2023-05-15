@@ -7,7 +7,6 @@ return {
     lazy = false,
     config = function()
         --coc settings
-        print("hello")
         vim.opt.backup = false
         vim.opt.writebackup = false
         vim.opt.updatetime = 300
