@@ -1,6 +1,6 @@
 return {
     "romgrk/barbar.nvim",
-    lazy = false,
+    --lazy = false,
     config = function()
         vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
         vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })

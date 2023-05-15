@@ -4,7 +4,7 @@ vim.g.coc_config_home = '~/.config/coc/'
 return {
     "neoclide/coc.nvim",
     branch = "release",
-    lazy = false,
+    --lazy = false,
     config = function()
         --coc settings
         vim.opt.backup = false
