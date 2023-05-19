@@ -1,5 +1,5 @@
 --使用+寄存器
-vim.opt.clipboard:append { 'unnamedplus' }
+vim.opt.clipboard:append({ "unnamedplus" })
 --高亮查找
 vim.o.hlsearch = true
 --增量查找
@@ -21,9 +21,11 @@ vim.o.smartindent = true
 vim.o.expandtab = true
 vim.o.autoindent = true
 --
-vim.o.encoding = 'UTF-8'
+vim.o.encoding = "UTF-8"
 --设置鼠标所在行高亮
 vim.o.cursorline = true
 --设置leader
-vim.g.mapleader = ','
-vim.g.localmapleader = '\\'
+vim.g.mapleader = ","
+vim.g.localmapleader = "\\"
+--预留左边的距离
+vim.o.signcolumn = 'yes'

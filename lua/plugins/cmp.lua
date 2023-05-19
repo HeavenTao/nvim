@@ -5,6 +5,8 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
     },
     config = function()
         local cmp = require("cmp")
@@ -25,7 +27,7 @@ return {
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 --{ name = "vsnip" }, -- For vsnip users.
-                -- { name = 'luasnip' }, -- For luasnip users.
+                { name = "luasnip" }, -- For luasnip users.
                 -- { name = 'ultisnips' }, -- For ultisnips users.
                 -- { name = 'snippy' }, -- For snippy users.
             }, {
@@ -60,7 +62,7 @@ return {
             }),
         })
 
-        -- Set up lspconfig.
+        ---- Set up lspconfig.
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
         require("lspconfig")["pyright"].setup({
