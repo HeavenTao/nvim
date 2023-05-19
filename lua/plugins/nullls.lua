@@ -12,6 +12,9 @@ return {
                 null_ls.builtins.formatting.stylua.with({
                     extra_args = { "--indent-type", "Spaces", "--indent-width", "4" },
                 }),
+                null_ls.builtins.completion.luasnip.with({
+                    filetypes = { "lua" },
+                }),
             },
             --aotoformat when save
             on_attach = function(client, bufnr)

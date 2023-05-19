@@ -11,6 +11,15 @@ return {
     config = function()
         local cmp = require("cmp")
         cmp.setup({
+            snippet = {
+                -- REQUIRED - you must specify a snippet engine
+                expand = function(args)
+                    --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+                    require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+                    -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+                    -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+                end,
+            },
             window = {
                 --completion = cmp.config.window.bordered(),
                 --documentation = cmp.config.window.bordered(),
@@ -66,6 +75,9 @@ return {
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
         require("lspconfig")["pyright"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["lua_ls"].setup({
             capabilities = capabilities,
         })
     end,
