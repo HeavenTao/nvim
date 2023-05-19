@@ -1,6 +1,6 @@
 return {
     "folke/trouble.nvim",
-    denpendices = {
+    dependenices = {
         "nvim-tree/nvim-web-devicon",
     },
     config = function()
