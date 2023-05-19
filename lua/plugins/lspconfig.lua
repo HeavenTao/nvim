@@ -1,6 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     config = function()
+        require("lspconfig").jsonls.setup({})
         require("lspconfig").pyright.setup({})
         require("lspconfig").lua_ls.setup({
             Lua = {

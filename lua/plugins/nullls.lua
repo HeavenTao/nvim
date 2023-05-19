@@ -15,6 +15,8 @@ return {
                 null_ls.builtins.completion.luasnip.with({
                     filetypes = { "lua" },
                 }),
+                --json formatter
+                null_ls.builtins.formatting.jq,
             },
             --aotoformat when save
             on_attach = function(client, bufnr)
