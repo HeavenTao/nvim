@@ -21,7 +21,8 @@ return {
             settings={
                 python={
                     analysis={
-                        stubPath=stubsPath
+                        stubPath=stubsPath,
+                        diagnosticMode="openFilesOnly"
                     }
                 }
             }
