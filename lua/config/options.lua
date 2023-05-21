@@ -27,5 +27,3 @@ vim.o.cursorline = true
 --设置leader
 vim.g.mapleader = ","
 vim.g.localmapleader = "\\"
---预留左边的距离
-vim.o.signcolumn = 'yes'
