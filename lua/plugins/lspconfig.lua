@@ -3,6 +3,8 @@ return {
     config = function()
         require("lsp.lua").setup()
         require("lsp.python").setup()
+        require("lsp.html").setup()
+        require("lsp.javascript").setup()
 
         vim.api.nvim_create_autocmd('LspAttach',
             {
