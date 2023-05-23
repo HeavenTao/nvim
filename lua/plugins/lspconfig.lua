@@ -4,7 +4,7 @@ return {
         require("lsp.lua").setup()
         require("lsp.python").setup()
         require("lsp.html").setup()
-        require("lsp.javascript").setup()
+        require("lsp.tsserver").setup()
 
         vim.api.nvim_create_autocmd('LspAttach',
             {
