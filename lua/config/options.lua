@@ -25,7 +25,10 @@ vim.o.encoding = "UTF-8"
 --设置鼠标所在行高亮
 vim.o.cursorline = true
 --预留错误提示
-vim.o.signcolumn='yes'
+vim.o.signcolumn = 'yes'
 --设置leader
 vim.g.mapleader = ","
+--
 vim.g.localmapleader = "\\"
+--
+vim.o.scrolloff = 10
