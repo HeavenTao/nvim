@@ -4,7 +4,11 @@ return {
         vim.g.loaded_netrw = 1
         vim.g.loaded_netrwPlugin = 1
         vim.opt.termguicolors = true
-        require("nvim-tree").setup()
+        require("nvim-tree").setup({
+            view = {
+                side = "right"
+            }
+        })
     end,
     keys = {
         { "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "NvimTree" }
