@@ -1,0 +1,20 @@
+{
+    "workspace.library": [
+        "/home/ubuntu/.config/nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/lazy.nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/ubuntu/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/mason.nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/toggleterm.nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/vim-startify",
+        "/home/ubuntu/.local/share/nvim/lazy/tokyonight.nvim",
+        "/home/ubuntu/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/ubuntu/.local/share/nvim/lazy/trouble.nvim",
+        "/usr/local/bin/nvim-linux64/share/nvim/runtime",
+        "/usr/local/bin/nvim-linux64/lib/nvim",
+        "/home/ubuntu/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library",
+        "/home/ubuntu/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/36d0b0f2",
+        "/home/ubuntu/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/21a7ee7d"
+    ]
+}
