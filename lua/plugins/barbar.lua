@@ -2,9 +2,12 @@ return {
     "romgrk/barbar.nvim",
     --lazy = false,
     config = function()
-        vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
-        vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
-        vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
+        local opt = { noremap = true, silent = true }
+        vim.keymap.set('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opt)
+        vim.keymap.set('n', '<A-.>', '<Cmd>BufferNext<CR>', opt)
+        vim.keymap.set('n', '<A-c>', '<Cmd>BufferClose<CR>', opt)
+        vim.keymap.set('n', '<C-,>', '<Cmd>BufferMovePrevious<CR>', opt)
+        vim.keymap.set('n', '<C-.>', '<Cmd>BufferMoveNext<CR>', opt)
 
         require('barbar').setup({
             animation = false,
