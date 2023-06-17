@@ -25,5 +25,8 @@ return {
                 },
             }
         }
-    end
+    end,
+    keys={
+        {"<c-\\>","<Cmd>ToggleTermToggleAll<CR>",desc="Terminal"}
+    }
 }

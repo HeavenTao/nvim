@@ -14,5 +14,6 @@ return {
                 "pyright"
             }
         }
-    end
+    end,
+    cmd = "Mason"
 }
