@@ -1,4 +1,5 @@
 return {
     "mhinz/vim-startify",
-    lazy = false
+    lazy = true,
+    enabled = false
 }
