@@ -15,5 +15,5 @@ return {
             }
         }
     end,
-    cmd = "Mason"
+    --cmd = "Mason"
 }
