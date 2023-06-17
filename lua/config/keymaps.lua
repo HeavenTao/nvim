@@ -16,7 +16,7 @@ vim.keymap.set("n", "<A-h>", "<C-W>h", opt)
 vim.keymap.set("n", "<A-j>", "<C-W>j", opt)
 vim.keymap.set("n", "<A-k>", "<C-W>k", opt)
 --保存
-vim.keymap.set("n", "<leader>w", ":w<cr>")
+vim.keymap.set("n", "<leader>w", ":wall<cr>")
 --编辑配置文件
 vim.keymap.set("n", "<leader>ev", ":edit $MYVIMRC<cr>")
 --加载配置文件
