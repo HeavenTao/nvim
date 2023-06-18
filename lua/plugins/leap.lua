@@ -1,11 +1,9 @@
 return {
-    "ggandor/flit.nvim",
+    "ggandor/leap.nvim",
     dependencies = {
-        { "ggandor/leap.nvim" },
         { "tpope/vim-repeat" }
     },
     config = function()
         require("leap").add_default_mappings(true)
-        require("flit").setup({})
     end
 }
