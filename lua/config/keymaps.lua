@@ -27,12 +27,4 @@ vim.keymap.set("n", "<leader>ss", ":source %<cr>")
 vim.keymap.set("n", "/", "/\\v")
 --使用4个空格代替tab
 vim.keymap.set("i", "<Tab>", "    ")
-
---copilot
-vim.keymap.set(
-    "i",
-    "<M-CR>",
-    'copilot#Accept("<CR>")',
-    { expr = true, noremap = true, silent = true, script = true, replace_keycodes = false }
-)
-vim.g.copilot_no_tab_map = true
+vim.keymap.set("n", "g0", "g^", opt)
