@@ -1,7 +1,8 @@
 return {
-    setup=function()
+    setup = function(capabilities)
         --lua
         require("lspconfig").lua_ls.setup {
+            capabilities = capabilities,
             settings = {
                 Lua = {
                     runtime = {

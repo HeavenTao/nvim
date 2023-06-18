@@ -1,5 +1,7 @@
 return {
-    setup = function()
-        require("lspconfig").html.setup {}
+    setup = function(capabilities)
+        require("lspconfig").html.setup({
+            capabilities = capabilities
+        })
     end
 }

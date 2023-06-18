@@ -1,5 +1,5 @@
 return {
-    setup = function()
+    setup = function(capabilities)
         --python
         local root_files = {
             'pyproject.toml',
@@ -19,6 +19,7 @@ return {
             stubsPath = root_path .. "/stubs"
         end
         require("lspconfig").pyright.setup {
+            capabilities = capabilities,
             root_dir = function()
                 return root_path
             end,
