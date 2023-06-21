@@ -27,4 +27,5 @@ vim.keymap.set("n", "<leader>ss", ":source %<cr>")
 vim.keymap.set("n", "/", "/\\v")
 --使用4个空格代替tab
 vim.keymap.set("i", "<Tab>", "    ")
-vim.keymap.set("n", "g0", "g^", opt)
+vim.keymap.set("n", "g0", "^", opt)
+vim.keymap.set("n", "gm", "$", opt)
