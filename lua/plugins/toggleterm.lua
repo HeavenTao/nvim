@@ -3,17 +3,17 @@ return {
     config = function()
         require('toggleterm').setup {
             size = 10,
-            open_mapping = [[<c-\>]],
+            --open_mapping = [[<c-\>]],
             insert_mappings = true,
             terminal_mappings = true,
-            hide_numbers = true,
+            hide_numbers = false,
             shade_filetypes = {},
             shade_terminals = false,
             shading_factor = 2,
             start_in_insert = true,
             persist_size = true,
             persist_mode = true,
-            direction = "horizontal",
+            direction = "float",
             close_on_exit = true,
             auto_scroll = true,
             float_opts = {
@@ -26,7 +26,9 @@ return {
             }
         }
     end,
-    keys={
-        {"<c-\\>","<Cmd>ToggleTermToggleAll<CR>",desc="Terminal"}
+    keys = {
+        { "<c-\\>", mode = "n", "<Cmd>ToggleTerm<CR>", desc = "TerminalOpen" },
+        { "<c-\\>", mode = "t", "<Cmd>ToggleTerm<CR>", desc = "TerminalClose" },
+        { "<ESC>",  mode = "t", [[<c-\><c-n>]],        desc = "TerminalExit" }
     }
 }
