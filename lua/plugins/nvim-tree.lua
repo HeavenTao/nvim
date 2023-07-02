@@ -6,7 +6,7 @@ return {
         vim.opt.termguicolors = true
         require("nvim-tree").setup({
             view = {
-                side = "right"
+                side = "right",
             }
         })
     end,
