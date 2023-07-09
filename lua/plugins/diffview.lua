@@ -3,5 +3,5 @@ return {
     config = function()
         require("diffview").setup({})
     end,
-    cmd = "DiffViewOpen"
+    cmd = "DiffviewOpen"
 }
