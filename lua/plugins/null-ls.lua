@@ -9,6 +9,8 @@ return {
             sources = {
                 null_ls.builtins.formatting.black,
                 null_ls.builtins.formatting.nixfmt,
+                null_ls.builtins.code_actions.statix,
+                null_ls.builtins.diagnostics.statix
             }
         })
     end
