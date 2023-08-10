@@ -16,7 +16,7 @@ return {
             direction = "float",
             close_on_exit = true,
             auto_scroll = true,
-            shell = "/run/current-system/sw/bin/fish",
+            shell = "fish",
             float_opts = {
                 border = "curved",
                 winblend = 0,
