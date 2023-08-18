@@ -34,3 +34,4 @@ vim.g.localmapleader = "\\"
 vim.o.scrolloff = 10
 --
 vim.opt.termguicolors = true
+--
