@@ -7,6 +7,7 @@ return {
         require("lsp.python").setup(capabilities)
         require("lsp.html").setup(capabilities)
         require("lsp.tsserver").setup(capabilities)
+        require("lsp.bash").setup(capabilities)
 
         vim.api.nvim_create_autocmd('LspAttach',
             {
