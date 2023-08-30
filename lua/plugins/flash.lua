@@ -1,5 +1,7 @@
 return {
     "folke/flash.nvim",
+    config = function()
+    end,
     event = "VeryLazy",
     opts = {},
     keys = {
@@ -28,5 +30,13 @@ return {
             end,
             desc = "Remote Flash",
         },
+        {
+            "R",
+            mode = { "o", "x" },
+            function()
+                require("flash").treesitter_search()
+            end,
+            desc = "Treesitter Search"
+        }
     },
 }
