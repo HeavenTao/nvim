@@ -2,18 +2,9 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim" 
+        "williamboman/mason-lspconfig.nvim"
     },
     config = function()
-        require("mason").setup()
-        require("mason-lspconfig").setup {
-            ensure_installed = {
-                "html",
-                "jsonls",
-                "lua_ls",
-                "pyright"
-            }
-        }
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         require("lsp.lua").setup(capabilities)
