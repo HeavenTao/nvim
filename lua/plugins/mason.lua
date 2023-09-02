@@ -5,15 +5,6 @@ return {
         { "williamboman/mason-lspconfig.nvim" }
     },
     config = function()
-        require("mason").setup()
-        require("mason-lspconfig").setup {
-            ensure_installed = {
-                "html",
-                "jsonls",
-                "lua_ls",
-                "pyright"
-            }
-        }
     end,
     --cmd = "Mason"
 }
