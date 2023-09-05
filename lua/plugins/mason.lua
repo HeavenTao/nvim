@@ -4,7 +4,7 @@ return {
     dependencies = {
         { "williamboman/mason-lspconfig.nvim" }
     },
-    enabled = false,
+    enabled = true,
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup {
@@ -12,7 +12,9 @@ return {
                 "html",
                 "jsonls",
                 "lua_ls",
-                "pyright"
+                "pyright",
+                "tsserver",
+                "bashls"
             }
         }
     end,
