@@ -1,8 +1,8 @@
 return {
     "neovim/nvim-lspconfig",
     dependencies = {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim"
+        --"williamboman/mason.nvim",
+        --"williamboman/mason-lspconfig.nvim"
     },
     config = function()
         -- Set up lspconfig.
@@ -12,6 +12,8 @@ return {
         require("lsp.html").setup(capabilities)
         require("lsp.tsserver").setup(capabilities)
         require("lsp.bash").setup(capabilities)
+        require("lsp.json").setup(capabilities)
+        require("lsp.css").setup(capabilities)
 
         vim.api.nvim_create_autocmd('LspAttach',
             {
