@@ -7,7 +7,7 @@ return {
         if vim.fn.has('termguicolors') ~= 0 then
             vim.o.termguicolors = true
         end
-        vim.cmd.colorscheme('tokyonight-moon')
+        vim.cmd.colorscheme('tokyonight-night')
         require('tokyonight').setup({
         })
     end
