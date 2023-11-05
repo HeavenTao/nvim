@@ -8,7 +8,7 @@ return {
             config = {
                 week_header = {
                     enable = true,
-                    concat = " Welcome HeavenTao!"
+                    concat = " Welcome HeavenTao!"
                 },
                 --shortcut = {
                 --{
@@ -19,12 +19,12 @@ return {
                 --},
                 project = {
                     enable = false,
-                    limit = 8,
+                    limit = 5,
                     icon = 'your icon',
                     label = '',
                     action = 'Telescope find_files cwd='
                 },
-                mru = { enable = false, limit = 10, icon = '', label = '', },
+                mru = { enable = false, limit = 10, icon = '󰣇', label = '', },
             }
         }
     end
