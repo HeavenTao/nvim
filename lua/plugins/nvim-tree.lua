@@ -7,6 +7,16 @@ return {
         require("nvim-tree").setup({
             view = {
                 side = "right",
+            },
+            renderer = {
+                icons = {
+                    glyphs = {
+                        git = {
+                            unstaged = "",
+                            renamed = ""
+                        }
+                    }
+                }
             }
         })
     end,
