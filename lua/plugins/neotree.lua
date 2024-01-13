@@ -20,6 +20,7 @@ return {
             { text = "󰌵", texthl = "DiagnosticSignHint" })
 
         require("neo-tree").setup({
+            use_libuv_file_watcher = true,
             close_if_last_window = true,
             filesystem = {
                 window = {
