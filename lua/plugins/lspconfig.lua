@@ -10,6 +10,7 @@ return {
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+        -- lua_ls
         lspconfig.lua_ls.setup {
             capabilities = capabilities,
             settings = {
@@ -58,12 +59,12 @@ return {
                 vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                    buffer = ev.buf,
-                    callback = function()
-                        vim.lsp.buf.format { bufnr = ev.buf, async = false }
-                    end
-                })
+                --vim.api.nvim_create_autocmd("BufWritePre", {
+                --buffer = ev.buf,
+                --callback = function()
+                --vim.lsp.buf.format { bufnr = ev.buf, async = false }
+                --end
+                --})
             end,
         })
     end
