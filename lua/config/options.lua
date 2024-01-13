@@ -1,36 +1,19 @@
---使用+寄存器
-vim.opt.clipboard:append({ "unnamedplus" })
---高亮查找
-vim.o.hlsearch = true
---增量查找
-vim.o.incsearch = true
---显示行号
-vim.o.number = true
-vim.o.relativenumber = true
---查找忽略大小写
-vim.o.ignorecase = true
---
-vim.o.timeoutlen = 300
---
-vim.o.softtabstop = 4
---
-vim.o.shiftwidth = 4
---
-vim.o.smartindent = true
---
-vim.o.expandtab = true
-vim.o.autoindent = true
---
-vim.o.encoding = "UTF-8"
---设置鼠标所在行高亮
-vim.o.cursorline = true
---预留错误提示
-vim.o.signcolumn = 'yes'
---设置leader
-vim.g.mapleader = ","
---
-vim.g.localmapleader = "\\"
---
-vim.o.scrolloff = 10
---
-vim.opt.termguicolors = true
+vim.g.mapleader="," 				-- 功能键
+vim.g.maplocalleader="\\" 			--第二功能键
+vim.opt.number = true 				--显示行号
+vim.opt.relativenumber=true 			--相对行号
+vim.opt.clipboard:append({"unnamedplus"}) 	--+寄存器成为默认使用的寄存器
+vim.opt.number = true 				--显示行号
+vim.opt.hlsearch=true				--高亮查找
+vim.opt.incsearch=true				--增量查找
+vim.opt.ignorecase=true				--查找忽略大小写
+vim.opt.timeoutlen=300			--按键间隔
+vim.opt.shiftwidth=4                            --
+vim.opt.smartindent=true
+vim.opt.autoindent=true
+vim.opt.expandtab=true                          --将Tab展开为Space
+vim.opt.encoding="UTF-8"
+vim.opt.cursorline=true
+vim.opt.signcolumn="yes"
+vim.opt.scrolloff=10
+vim.opt.termguicolors=true
