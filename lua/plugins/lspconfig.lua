@@ -13,6 +13,12 @@ return {
                     runtime = {
                         version = "LuaJIT"
 
+                    },
+                    workspace = {
+                        checkThirdParty = true,
+                        library = {
+                            vim.env.VIMRUNTIME
+                        }
                     }
                 }
             }
@@ -42,7 +48,7 @@ return {
                 vim.api.nvim_create_autocmd("BufWritePre", {
                     buffer = ev.buf,
                     callback = function()
-                        vim.lsp.buf.format { bufnr = ev.buf, async = true }
+                        vim.lsp.buf.format { bufnr = ev.buf, async = false }
                     end
                 })
             end,

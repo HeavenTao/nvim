@@ -20,8 +20,7 @@ return {
             { text = "󰌵", texthl = "DiagnosticSignHint" })
 
         require("neo-tree").setup({
-            close_if_last_window = false,
-            fileSystem
+            close_if_last_window = true,
             window = {
                 position = "right",
                 mappings = {
