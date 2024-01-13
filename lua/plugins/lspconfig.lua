@@ -2,12 +2,16 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim"
+        "williamboman/mason-lspconfig.nvim",
+        "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
         local lspconfig = require("lspconfig")
-
+        -- Set up lspconfig.
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
         lspconfig.lua_ls.setup {
+            capabilities = capabilities,
             settings = {
                 Lua = {
                     runtime = {
@@ -15,15 +19,24 @@ return {
 
                     },
                     workspace = {
-                        checkThirdParty = true,
+                        checkThirdParty = false,
                         library = {
-                            vim.env.VIMRUNTIME
+                            vim.env.VIMRUNTIME,
+                            '/usr/share/lua/5.3',
+                            '/usr/share/awesome/lib'
+                        },
+                    },
+                    diagnostics = {
+                        globals = {
+                            "vim"
                         }
+                    },
+                    completion = {
+                        callSnippet = "Replace",
                     }
                 }
             }
         }
-
         -- Use LspAttach autocommand to only map the following keys
         -- after the language server attaches to the current buffer
         vim.api.nvim_create_autocmd('LspAttach', {

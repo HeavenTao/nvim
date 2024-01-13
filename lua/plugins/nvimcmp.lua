@@ -1,7 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
-    event = "InsertEnter",
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
@@ -71,12 +70,5 @@ return {
                 { name = 'cmdline' }
             })
         })
-
-        -- Set up lspconfig.
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-        require('lspconfig').lua_ls.setup {
-            capabilities = capabilities
-        }
     end
 }
