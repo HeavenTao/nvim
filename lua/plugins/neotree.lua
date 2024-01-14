@@ -7,7 +7,7 @@ return {
         "MunifTanjim/nui.nvim",
     },
     keys = {
-        { "<leader>n", "<cmd>Neotree toggle<cr>", "Neotree toggle" }
+        { "<leader>n", "<cmd>Neotree source=filesystem position=float toggle=true reveal=true<cr>", "Neotree toggle" }
     },
     config = function()
         vim.fn.sign_define("DiagnosticSignError",
@@ -24,7 +24,6 @@ return {
             filesystem = {
                 use_libuv_file_watcher = false,
                 window = {
-                    position = "right",
                     mappings = {
                         ["l"] = {
                             "toggle_node"
