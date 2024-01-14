@@ -29,7 +29,9 @@ return {
                     },
                     diagnostics = {
                         globals = {
-                            "vim"
+                            "vim",
+                            "mouse",
+                            "root"
                         }
                     },
                     completion = {
@@ -38,6 +40,36 @@ return {
                 }
             }
         }
+
+        --bash_ls
+        lspconfig.bashls.setup({
+            capabilities = capabilities
+        })
+
+        --css_ls
+        lspconfig.cssls.setup({
+            capabilities = capabilities
+        })
+
+        --html_ls
+        lspconfig.html.setup({
+            capabilities = capabilities
+        })
+
+        --json_ls
+        lspconfig.jsonls.setup({
+            capabilities = capabilities
+        })
+
+        --javascript_ls
+        lspconfig.tsserver.setup({
+            capabilities = capabilities
+        })
+
+        --python
+        lspconfig.pyright.setup({
+            capabilities = capabilities
+        })
         -- Use LspAttach autocommand to only map the following keys
         -- after the language server attaches to the current buffer
         vim.api.nvim_create_autocmd('LspAttach', {
