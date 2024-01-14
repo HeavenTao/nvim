@@ -6,7 +6,7 @@ return {
     keys = {
         { "<A-,>", "<cmd>BufferLineCyclePrev<cr>",       "BufferLineCyclePrev" },
         { "<A-.>", "<cmd>BufferLineCycleNext<cr>",       "BufferLineCycleNext" },
-        { "<A-c>", "<cmd>bdelete! %d<cr>",               "BufferDelete" },
+        { "<A-c>", "<cmd>bdelete<cr>",                   "BufferDelete" },
         { "<A-[>", "<cmd>BufferLineMovePrev<cr>",        "BufferLineMovePrev" },
         { "<A-]>", "<cmd>BufferLineMoveNext<cr>",        "BufferLineMoveNext" },
         { "<A-p>", "<cmd>BufferLineTogglePin<cr>",       "BufferLineTogglePin" },

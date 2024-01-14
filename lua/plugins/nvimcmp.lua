@@ -5,7 +5,8 @@ return {
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
         "saadparwaiz1/cmp_luasnip",
-        'hrsh7th/cmp-cmdline'
+        'hrsh7th/cmp-cmdline',
+        "onsails/lspkind.nvim"
     },
     config = function()
         local cmp = require("cmp")
@@ -37,10 +38,19 @@ return {
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' }, -- For luasnip users.
-                { name = "path" }
+                { name = "path" },
+                { name = "codeium" }
             }, {
                 { name = 'buffer' },
-            })
+            }),
+            formatting = {
+                format = require('lspkind').cmp_format({
+                    mode = "symbol",
+                    maxwidth = 50,
+                    ellipsis_char = '...',
+                    symbol_map = { Codeium = "", }
+                })
+            }
         })
 
         -- Set configuration for specific filetype.
