@@ -22,6 +22,7 @@ return {
 					},
 				},
 			},
+			extensions = { "lazy", "mason", "neo-tree", "symbols-outline", "toggleterm", "trouble" },
 		})
 	end,
 }
