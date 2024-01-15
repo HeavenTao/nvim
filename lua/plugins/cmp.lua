@@ -1,60 +1,48 @@
 return {
-    "hrsh7th/nvim-cmp",
-    version = false, -- last release is way too old
-    dependencies = {
-        "neovim/nvim-lspconfig",
-        "hrsh7th/cmp-nvim-lsp",
-        "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-path",
-        'hrsh7th/cmp-cmdline',
-        "saadparwaiz1/cmp_luasnip",
-        'L3MON4D3/LuaSnip',
-        "onsails/lspkind.nvim"
-    },
-    config = function()
-        local cmp = require("cmp")
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/nvim-cmp',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    config=function()
+        -- Set up nvim-cmp.
+        local cmp = require'cmp'
+        
         cmp.setup({
-            completion = {
-                completeopt = "menu,menuone,noinsert"
-            },
             snippet = {
                 -- REQUIRED - you must specify a snippet engine
                 expand = function(args)
+                    --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
                     require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+                    -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+                    -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
                 end,
             },
             window = {
-                completion = cmp.config.window.bordered(),
-                documentation = cmp.config.window.bordered(),
+                --completion = cmp.config.window.bordered(),
+                --documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                ['<ESC>'] = cmp.mapping.abort(),
-                ['<TAB>'] = cmp.mapping.confirm({
-                    behavior = cmp.ConfirmBehavior.Replace,
-                    select = true
-                }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-                ["<C-j>"] = cmp.mapping.select_next_item(),
-                ["<C-k>"] = cmp.mapping.select_prev_item(),
+                ['<C-Space>'] = cmp.mapping.complete(),
+                ['<C-e>'] = cmp.mapping.abort(),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-                { name = 'luasnip', option = { show_autosnippets = true } }, -- For luasnip users.
-                { name = "path" },
-                { name = "codeium" }
+                --{ name = 'vsnip' }, -- For vsnip users.
+                { name = 'luasnip' }, -- For luasnip users.
+                -- { name = 'ultisnips' }, -- For ultisnips users.
+                -- { name = 'snippy' }, -- For snippy users.
             }, {
                 { name = 'buffer' },
-            }),
-            formatting = {
-                format = require('lspkind').cmp_format({
-                    mode = "symbol",
-                    maxwidth = 50,
-                    ellipsis_char = '...',
-                    symbol_map = { Codeium = "", }
-                })
-            }
+            })
         })
+        
 
         -- Set configuration for specific filetype.
         cmp.setup.filetype('gitcommit', {

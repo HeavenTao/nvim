@@ -15,5 +15,6 @@ vim.opt.expandtab=true                          --将Tab展开为Space
 vim.opt.encoding="UTF-8"
 vim.opt.cursorline=true
 vim.opt.signcolumn="yes"
-vim.opt.scrolloff=10
+vim.opt.scrolloff=5
 vim.opt.termguicolors=true
+vim.opt.completeopt={"menu","menuone","noselect"}
