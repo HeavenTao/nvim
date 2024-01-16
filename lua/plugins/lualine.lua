@@ -8,7 +8,7 @@ return {
 				component_separators = { left = "", right = "" },
 			},
 			sections = {
-				lualine_a = { "mode" },
+				lualine_a = { { "mode", icon = "" } },
 				lualine_b = {
 					"branch",
 					{
@@ -26,7 +26,7 @@ return {
 					},
 					"diagnostics",
 				},
-				lualine_c = { "filename" },
+				lualine_c = { { "filename", icon = "" } },
 				lualine_x = {
 					{
 						"encoding",
@@ -38,6 +38,7 @@ return {
 				lualine_y = {
 					{
 						"progress",
+						icon = "󰏰",
 						color = {
 							bg = "#f38ba8",
 							fg = "#1e1e2e",
@@ -45,6 +46,7 @@ return {
 					},
 					{
 						"location",
+						icon = "",
 						color = {
 							bg = "#89b4fa",
 							fg = "#1e1e2e",
