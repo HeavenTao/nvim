@@ -38,7 +38,7 @@ return {
 				lualine_y = {
 					{
 						"progress",
-						icon = "󰏰",
+						icon = "󰠞",
 						color = {
 							bg = "#f38ba8",
 							fg = "#1e1e2e",

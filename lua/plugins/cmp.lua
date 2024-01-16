@@ -36,16 +36,13 @@ return {
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<ESC>"] = cmp.mapping.abort(),
-				["<TAB>"] = cmp.mapping.confirm({
-					behavior = cmp.ConfirmBehavior.Replace,
-					select = true,
-				}), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+				["<TAB>"] = cmp.mapping.confirm({ select = true }),
 				["<C-j>"] = cmp.mapping.select_next_item(),
 				["<C-k>"] = cmp.mapping.select_prev_item(),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "luasnip", option = { show_autosnippets = true } }, -- For luasnip users.
+				{ name = "luasnip" }, -- For luasnip users.
 				{ name = "path" },
 				{ name = "codeium" },
 			}, {
@@ -53,8 +50,8 @@ return {
 			}),
 			formatting = {
 				format = require("lspkind").cmp_format({
-					mode = "symbol",
-					maxwidth = 50,
+					mode = "text_symbol",
+					maxwidth = 100,
 					ellipsis_char = "...",
 					symbol_map = { Codeium = "" },
 				}),
