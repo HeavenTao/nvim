@@ -27,14 +27,38 @@ return {
 					"diagnostics",
 				},
 				lualine_c = { "filename" },
-				lualine_x = { "encoding", "filetype" },
-				lualine_y = { "progress", "location" },
+				lualine_x = {
+					{
+						"encoding",
+					},
+					{
+						"filetype",
+					},
+				},
+				lualine_y = {
+					{
+						"progress",
+						color = {
+							bg = "#f38ba8",
+							fg = "#1e1e2e",
+						},
+					},
+					{
+						"location",
+						color = {
+							bg = "#89b4fa",
+							fg = "#1e1e2e",
+						},
+					},
+				},
 				lualine_z = {
 					{
 						function()
 							return os.date("%R")
 						end,
-						color = { bg = "#9ece6a" },
+						color = {
+							bg = "#9ece6a",
+						},
 						icon = " ",
 					},
 				},
