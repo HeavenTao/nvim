@@ -9,16 +9,33 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
+				lualine_b = {
+					"branch",
+					{
+						"diff",
+						diff_color = {
+							added = { fg = "#9ece6a" },
+							modified = { fg = "#7aa2f7" },
+							removed = { fg = "#f7768e" },
+						},
+						symbols = {
+							added = " ",
+							modified = " ",
+							removed = " ",
+						},
+					},
+					"diagnostics",
+				},
 				lualine_c = { "filename" },
 				lualine_x = { "encoding", "filetype" },
 				lualine_y = { "progress", "location" },
 				lualine_z = {
 					{
 						function()
-							return " " .. os.date("%R")
+							return os.date("%R")
 						end,
 						color = { bg = "#9ece6a" },
+						icon = " ",
 					},
 				},
 			},
