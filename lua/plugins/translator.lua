@@ -1,9 +1,5 @@
 return {
-    "voldikss/vim-translator",
-    config = function()
-    end,
-    keys = {
-        { "<leader>t", "<Plug>Translate",  desc = "Translate" },
-        { "<leader>t", "<Plug>TranslateV", mode = "v" }
-    }
+	"voldikss/vim-translator",
+	config = function() end,
+	keys = { { "<leader>t", "<Plug>Translate", desc = "Translate" }, { "<leader>t", "<Plug>TranslateV", mode = "v" } },
 }

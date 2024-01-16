@@ -26,7 +26,13 @@ return {
 					},
 					"diagnostics",
 				},
-				lualine_c = { { "filename", icon = "" } },
+				lualine_c = {
+					{
+						"filename",
+						icon = "",
+						path = 3,
+					},
+				},
 				lualine_x = {
 					{
 						"encoding",
