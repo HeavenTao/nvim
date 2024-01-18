@@ -13,8 +13,6 @@ return {
 	},
 	config = function()
 		-- Customization for Pmenu
-		--
-		vim.api.nvim_set_hl(0, "CmpItemKindCodeium", { fg = "#D8EEEB", bg = "#58B5A8" })
 		vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#282C34", fg = "NONE" })
 		vim.api.nvim_set_hl(0, "Pmenu", { fg = "#C5CDD9", bg = "#22252A" })
 
@@ -56,7 +54,10 @@ return {
 		vim.api.nvim_set_hl(0, "CmpItemKindColor", { fg = "#D8EEEB", bg = "#58B5A8" })
 		vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#D8EEEB", bg = "#58B5A8" })
 
+		vim.api.nvim_set_hl(0, "CmpItemKindCodeium", { fg = "#D8EEEB", bg = "#58B5A8" })
+
 		local cmp = require("cmp")
+		local lspkind = require("lspkind")
 		cmp.setup({
 			experimental = {
 				ghost_text = {
@@ -97,7 +98,7 @@ return {
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
-					local kind = require("lspkind").cmp_format({
+					local kind = lspkind.cmp_format({
 						mode = "symbol_text",
 						maxwidth = 100,
 						ellipsis_char = "...",
