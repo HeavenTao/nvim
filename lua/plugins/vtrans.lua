@@ -5,7 +5,7 @@ return {
 		{
 			"<leader>t",
 			function()
-				require("v-trans").sayhello()
+				require("v-trans").translate()
 			end,
 			"VTransTest",
 		},

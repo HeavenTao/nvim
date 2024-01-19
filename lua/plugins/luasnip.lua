@@ -32,12 +32,12 @@ return {
 			end,
 			mode = "s",
 		},
-		{
-			"<s-tab>",
-			function()
-				require("luasnip").jump(-1)
-			end,
-			mode = { "i", "s" },
-		},
+		--{
+		--"<s-tab>",
+		--function()
+		--require("luasnip").jump(-1)
+		--end,
+		--mode = { "i", "s" },
+		--},
 	},
 }

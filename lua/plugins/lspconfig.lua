@@ -25,6 +25,7 @@ return {
 						checkThirdParty = false,
 						library = {
 							vim.env.VIMRUNTIME,
+							"/usr/share/lua/5.4",
 							"/usr/share/lua/5.3",
 							"/usr/share/awesome/lib",
 						},
