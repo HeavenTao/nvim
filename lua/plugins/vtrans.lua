@@ -1,7 +1,9 @@
 return {
 	dir = "~/code/v-trans/",
 	lazy = false,
-	config = function() end,
+	config = function()
+		require("v-trans").setup()
+	end,
 	keys = {
 		{
 			"<leader>t",
