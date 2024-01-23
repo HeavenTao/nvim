@@ -31,6 +31,11 @@ return {
 						["h"] = {
 							"close_node",
 						},
+						["<ESC>"] = "clear_filter",
+					},
+					fuzzy_finder_mappings = {
+						["<C-j>"] = "move_cursor_down",
+						["<C-k>"] = "move_cursor_up",
 					},
 				},
 			},
