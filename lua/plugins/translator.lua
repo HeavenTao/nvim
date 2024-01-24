@@ -1,6 +1,6 @@
 return {
 	"voldikss/vim-translator",
-	enabled = true,
+	enabled = false,
 	config = function() end,
 	keys = {
 		{ "<leader>t", "<Plug>Translate", desc = "Translate" },

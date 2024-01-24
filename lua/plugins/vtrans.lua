@@ -1,7 +1,7 @@
 return {
 	dir = "~/code/v-trans/",
 	lazy = false,
-	enabled = false,
+	enabled = true,
 	config = function()
 		require("v-trans").setup()
 	end,
