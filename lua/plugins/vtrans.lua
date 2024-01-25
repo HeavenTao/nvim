@@ -13,5 +13,13 @@ return {
 			end,
 			"VTransTest",
 		},
+		{
+			"<leader>t",
+			function()
+				require("v-trans").vtranslate()
+			end,
+			mode = "v",
+			desc = "翻译句子",
+		},
 	},
 }

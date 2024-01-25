@@ -43,5 +43,6 @@ return {
 		{ "<leader>fg", "<Cmd>Telescope live_grep<cr>", desc = "live_grep" },
 		{ "<leader>ft", "<Cmd>TodoTelescope<cr>", desc = "todo" },
 		{ "<leader>fk", "<Cmd>Telescope keymaps<cr>", desc = "keymaps" },
+		{ "<leader>fm", "<Cmd>Telescope marks<cr>", desc = "marks" },
 	},
 }
