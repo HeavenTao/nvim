@@ -15,7 +15,9 @@ vim.keymap.set("n", "<A-k>", "<C-W>k", opt)
 vim.keymap.set("n", "<leader>w", ":wall<cr>")
 --使用4个空格代替tab
 --vim.keymap.set("i", "<Tab>", "    ")
---移动到行首
+--行首行尾移动
 vim.keymap.set("n", "g0", "^", opt)
---移动到行尾
 vim.keymap.set("n", "gm", "$", opt)
+--virtual模式行首行尾选中
+vim.keymap.set("v", "g0", "^", opt)
+vim.keymap.set("v", "gm", "$", opt)
