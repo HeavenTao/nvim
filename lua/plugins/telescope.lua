@@ -30,9 +30,13 @@ return {
 				mappings = {
 					i = {
 						["<cr>"] = custom_actions.fzf_multi_select,
+						["<c-f>"] = actions.preview_scrolling_down,
+						["<c-b>"] = actions.preview_scrolling_up,
 					},
 					n = {
 						["<cr>"] = custom_actions.fzf_multi_select,
+						["<c-f>"] = actions.preview_scrolling_down,
+						["<c-b>"] = actions.preview_scrolling_up,
 					},
 				},
 			},
@@ -44,5 +48,6 @@ return {
 		{ "<leader>ft", "<Cmd>TodoTelescope<cr>", desc = "todo" },
 		{ "<leader>fk", "<Cmd>Telescope keymaps<cr>", desc = "keymaps" },
 		{ "<leader>fm", "<Cmd>Telescope marks<cr>", desc = "marks" },
+		{ "<leader>fr", "<Cmd>Telescope registers<cr>", desc = "registers" },
 	},
 }
