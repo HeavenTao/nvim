@@ -73,6 +73,12 @@ return {
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
 		})
+
+		--c
+		lspconfig.clangd.setup({
+			capabilities = capabilities,
+		})
+
 		-- Use LspAttach autocommand to only map the following keys
 		-- after the language server attaches to the current buffer
 		vim.api.nvim_create_autocmd("LspAttach", {
