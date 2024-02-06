@@ -29,12 +29,12 @@ return {
 				},
 				mappings = {
 					i = {
-						["<cr>"] = custom_actions.fzf_multi_select,
+						--["<cr>"] = custom_actions.fzf_multi_select,
 						["<c-f>"] = actions.preview_scrolling_down,
 						["<c-b>"] = actions.preview_scrolling_up,
 					},
 					n = {
-						["<cr>"] = custom_actions.fzf_multi_select,
+						--["<cr>"] = custom_actions.fzf_multi_select,
 						["<c-f>"] = actions.preview_scrolling_down,
 						["<c-b>"] = actions.preview_scrolling_up,
 					},
