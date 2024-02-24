@@ -126,7 +126,29 @@ return {
 		})
 		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 		cmp.setup.cmdline({ "/", "?" }, {
-			mapping = cmp.mapping.preset.cmdline(),
+			mapping = cmp.mapping.preset.cmdline({
+				["<TAB>"] = {
+					c = cmp.mapping.confirm({ select = false }),
+				},
+				["<C-j>"] = {
+					c = function(fallback)
+						if cmp.visible() then
+							cmp.select_next_item()
+						else
+							fallback()
+						end
+					end,
+				},
+				["<C-k>"] = {
+					c = function(fallback)
+						if cmp.visible() then
+							cmp.select_prev_item()
+						else
+							fallback()
+						end
+					end,
+				},
+			}),
 			sources = {
 				{ name = "buffer" },
 			},
