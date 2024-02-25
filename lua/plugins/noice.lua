@@ -31,6 +31,9 @@ return {
 			},
 			messages = {
 				view = "mini",
+				view_error = "mini",
+				view_warn = "mini",
+				view_history = "messages",
 			},
 		})
 
@@ -46,4 +49,7 @@ return {
 			end
 		end, { silent = true, expr = true })
 	end,
+	keys = {
+		{ "<leader>fn", "<Cmd>Noice telescope<CR>", desc = "Filter Noice Message" },
+	},
 }

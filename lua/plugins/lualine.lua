@@ -35,6 +35,42 @@ return {
 				},
 				lualine_x = {
 					{
+						function()
+							local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+							if next(clients) == nil then
+								return "No LSP"
+							end
+
+							local client_names = {}
+							for _, client in ipairs(clients) do
+								table.insert(client_names, client.name)
+							end
+
+							return "[" .. table.concat(client_names, ",") .. "]"
+						end,
+						icon = " ",
+						color = {
+							fg = "#9ece6a",
+						},
+					},
+					{
+						function()
+							if not package.loaded["nvim-treesitter"] then
+								return ""
+							end
+							local parsers = require("nvim-treesitter.parsers")
+							local has_parser = parsers.has_parser(parsers.get_buf_lang(vim.api.nvim_get_current_buf()))
+							if has_parser then
+								return "TS 󰈈 "
+							else
+								return "TS 󰈉 "
+							end
+						end,
+						color = {
+							fg = "#7aa2f7",
+						},
+					},
+					{
 						"encoding",
 					},
 					{
