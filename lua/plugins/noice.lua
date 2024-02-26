@@ -35,6 +35,10 @@ return {
 				view_warn = "mini",
 				view_history = "messages",
 			},
+			notify = {
+				enable = true,
+				view = "mini",
+			},
 		})
 
 		vim.keymap.set({ "n", "i", "s" }, "<c-f>", function()
