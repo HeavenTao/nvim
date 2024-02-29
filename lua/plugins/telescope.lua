@@ -49,5 +49,6 @@ return {
 		{ "<leader>fk", "<Cmd>Telescope keymaps<cr>", desc = "keymaps" },
 		{ "<leader>fm", "<Cmd>Telescope marks<cr>", desc = "marks" },
 		{ "<leader>fr", "<Cmd>Telescope registers<cr>", desc = "registers" },
+		{ "<leader>fb", "<Cmd>Telescope buffers<cr>", desc = "buffers" },
 	},
 }

@@ -48,7 +48,6 @@ return {
 					delay = 200,
 					reveal = { "close" },
 				},
-				sort_by = "relative_directory",
 				indicator = {
 					style = "underline",
 				},
