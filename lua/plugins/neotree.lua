@@ -22,6 +22,9 @@ return {
 		require("neo-tree").setup({
 			close_if_last_window = true,
 			filesystem = {
+				filtered_items = {
+					hide_dotfiles = false,
+				},
 				use_libuv_file_watcher = false,
 				window = {
 					mappings = {
