@@ -71,10 +71,10 @@ return {
 						},
 					},
 					{
-						"encoding",
+						"filetype",
 					},
 					{
-						"filetype",
+						"encoding",
 					},
 				},
 				lualine_y = {
