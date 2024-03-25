@@ -15,6 +15,7 @@ return {
 				"pyright",
 				"tsserver",
 				"bashls",
+				"rust_analyzer",
 			},
 		})
 	end,
