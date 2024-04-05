@@ -29,7 +29,7 @@ return {
 				t({
 					" = { mt = {} }",
 					"",
-					"local function new() end",
+					"local function new(...) end",
 					"",
 				}),
 				t("function "),
