@@ -1,0 +1,19 @@
+{
+    "new widget": {
+        "prefix": "nwd",
+        "body": [
+            "local $1 = { mt = {} }",
+            "",
+            "local function new (screen)",
+            "\t$0",
+            "end",
+            "",
+            "function $1.mt_call(...)",
+            "\treturn new (...)",
+            "end",
+            "",
+            "return setmetatable($1,$1.mt)"
+        ],
+        "description": "build a new widget code"
+    }
+}

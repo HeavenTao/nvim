@@ -5,7 +5,15 @@ return {
 	dependencies = {
 		"rafamadriz/friendly-snippets",
 		config = function()
-			require("luasnip.loaders.from_vscode").lazy_load()
+			local paths = vim.list_extend(
+				vim.api.nvim_get_runtime_file("package.json", true),
+				vim.api.nvim_get_runtime_file("package.jsonc", true)
+			)
+			table.insert(paths, os.getenv("HOME") .. "/.config/nvim/lua/snippets/")
+			require("luasnip.loaders.from_vscode").lazy_load({
+				paths = paths,
+			})
+
 			require("luasnip").filetype_extend("lua", { "luadoc" })
 			require("luasnip").filetype_extend("javascript", { "jsdoc" })
 			require("luasnip").filetype_extend("python", { "pydoc" })
@@ -15,42 +23,6 @@ return {
 		history = true,
 		delete_check_events = "TextChanged",
 	},
-	config = function()
-		local ls = require("luasnip")
-		local s = ls.snippet
-		local t = ls.text_node
-		local i = ls.insert_node
-		local rep = require("luasnip.extras").rep
-
-		ls.add_snippets("lua", {
-			s("wid", {
-				t("local "),
-				i(1),
-				t({
-					" = { mt = {} }",
-					"",
-					"local function new(...) end",
-					"",
-				}),
-				t("function "),
-				rep(1),
-				t({
-					".mt__call(...)",
-				}),
-				t({ "", "\t" }),
-				t({
-					"return new (...)",
-					"end",
-					"",
-				}),
-				t("return setmetatable("),
-				rep(1),
-				t(", "),
-				rep(1),
-				t(".mt)"),
-			}),
-		})
-	end,
 	keys = {
 		{
 			"<tab>",
@@ -72,6 +44,16 @@ return {
 			"<s-tab>",
 			function()
 				require("luasnip").jump(-1)
+			end,
+			mode = { "i", "s" },
+		},
+		{
+			"<c-e>",
+			function()
+				local ls = require("luasnip")
+				if ls.choice_active then
+					ls.change_choice(1)
+				end
 			end,
 			mode = { "i", "s" },
 		},
