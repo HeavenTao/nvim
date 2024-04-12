@@ -3,7 +3,7 @@ local opt = { silent = true, noremap = true }
 vim.keymap.set("i", "jk", "<ESC>", opt)
 --退出
 vim.keymap.set("n", "<leader>q", ":q<cr>", opt)
-vim.keymap.set("n", "Q", ":qall<cr>", opt)
+--vim.keymap.set("n", "Q", ":qall<cr>", opt)
 --取消高亮
 vim.keymap.set("n", "<ESC>", ":noh<cr>", opt)
 --窗口切换
