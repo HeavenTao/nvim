@@ -39,5 +39,11 @@
         "body": [
             "local gtable = require(\"gears.table\")"
         ]
+    },
+    "ref gears": {
+        "prefix": "lg",
+        "body": [
+            "local gears = require(\"gears\")"
+        ]
     }
 }
