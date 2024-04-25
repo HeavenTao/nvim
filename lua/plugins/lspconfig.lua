@@ -38,6 +38,8 @@ return {
 							"vim",
 							"mouse",
 							"root",
+							"client",
+							"awesome",
 						},
 					},
 					completion = {
