@@ -2,6 +2,11 @@
     "new widget": {
         "prefix": "nwd",
         "body": [
+            "local base = require(\"wibox.widget.base\")",
+            "local gtable = require(\"gears.table\")",
+            "local wibox=require(\"wibox\")",
+            "local gears = require(\"gears\")",
+            "",
             "local $1 = { mt = {} }",
             "",
             "local function new (screen)",
