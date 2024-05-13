@@ -18,6 +18,7 @@ require("config.neovide")
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
+		{ import = "dap" },
 	},
 	change_detection = {
 		enable = true,
