@@ -6,7 +6,7 @@ return {
 		local dap = require("dap")
 		dap.adapters["local-lua"] = {
 			type = "executable",
-			command = "node",
+			command = "bun",
 			args = {
 				vim.fn.stdpath("data") .. "/lazy/local-lua-debugger-vscode/extension/debugAdapter.js",
 			},
