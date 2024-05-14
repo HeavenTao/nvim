@@ -97,6 +97,11 @@ return {
 			capabilities = capabilities,
 		})
 
+		--svelte
+		lspconfig.svelte.setup({
+			capabilities = capabilities,
+		})
+
 		--rust
 		lspconfig.rust_analyzer.setup({
 			capabilities = capabilities,
