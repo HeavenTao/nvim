@@ -68,5 +68,6 @@
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vscode-js-debug": { "branch": "main", "commit": "7349abcd0aaf72375645a4a876afab6479e0ed7e" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
+  "xmake.nvim": { "branch": "v2", "commit": "e0955a71064470823828ce9db28851addc666c28" },
   "yankbank-nvim": { "branch": "main", "commit": "673e5cfeb67fabd9d8b26193191305de35a4c4bc" }
 }
