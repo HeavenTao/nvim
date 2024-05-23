@@ -15,6 +15,7 @@
   "flash.nvim": { "branch": "main", "commit": "11a2e667d19d8f48c93c6ed2e2e525ac6b1b79be" },
   "friendly-snippets": { "branch": "main", "commit": "dd2fd1281d4b22e7b4a5bfafa3e142d958e251f2" },
   "gitsigns.nvim": { "branch": "main", "commit": "805610a9393fa231f2c2b49cb521bfa413fadb3d" },
+  "hover.nvim": { "branch": "main", "commit": "82684ebd5f2a812d6d05a629b14109618b54cbfc" },
   "indent-blankline.nvim": { "branch": "master", "commit": "ece00d5fb44d196680a81fd2761062d2fa44663b" },
   "lazy.nvim": { "branch": "main", "commit": "0de782a6b0ffba599dbd332a4019d852564bf28c" },
   "lazygit.nvim": { "branch": "main", "commit": "ad3e1ea592f9d13e86e0d4e850224d9d78069508" },
@@ -68,6 +69,5 @@
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vscode-js-debug": { "branch": "main", "commit": "7349abcd0aaf72375645a4a876afab6479e0ed7e" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
-  "xmake.nvim": { "branch": "v2", "commit": "e0955a71064470823828ce9db28851addc666c28" },
   "yankbank-nvim": { "branch": "main", "commit": "673e5cfeb67fabd9d8b26193191305de35a4c4bc" }
 }

@@ -22,8 +22,15 @@ local _M = {
 					type = "codelldb",
 					request = "launch",
 					program = function()
-						--return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-						return require("xmake.project").info.target.exec_path
+						if lang == "c" then
+							return vim.fn.input(
+								"Path to executable: ",
+								vim.fn.getcwd() .. "/build/linux/x86_64/debug/",
+								"file"
+							)
+						else
+							return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+						end
 					end,
 					cwd = "${workspaceFolder}",
 				},
