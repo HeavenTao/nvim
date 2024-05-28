@@ -33,21 +33,21 @@ return {
 			end,
 			desc = "hover.nvim(select)",
 		},
-		{
-			"<c-p>",
-			mode = { "n" },
-			function()
-				require("hover").hover_switch("previous")
-			end,
-			desc = "hover.nvim(previous source)",
-		},
-		{
-			"<c-n>",
-			mode = { "n" },
-			function()
-				require("hover").hover_switch("next")
-			end,
-			desc = "hover.nvim(next source)",
-		},
+		--{
+		--"<c-p>",
+		--mode = { "n" },
+		--function()
+		--require("hover").hover_switch("previous")
+		--end,
+		--desc = "hover.nvim(previous source)",
+		--},
+		--{
+		--"<c-n>",
+		--mode = { "n" },
+		--function()
+		--require("hover").hover_switch("next")
+		--end,
+		--desc = "hover.nvim(next source)",
+		--},
 	},
 }
