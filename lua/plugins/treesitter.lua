@@ -2,6 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	enabled = true,
 	build = ":TSUpdate",
+	dependencies = { "nushell/tree-sitter-nu" },
 	config = function()
 		local parserPath = vim.fn.stdpath("data") .. "/treesitter"
 		vim.opt.rtp:append(parserPath)
