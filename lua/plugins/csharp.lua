@@ -1,5 +1,6 @@
 return {
 	"iabdelkareem/csharp.nvim",
+	lazy = true,
 	dependencies = {
 		"williamboman/mason.nvim", -- Required, automatically installs omnisharp
 		"mfussenegger/nvim-dap",

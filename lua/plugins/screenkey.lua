@@ -3,4 +3,5 @@ return {
 	cmd = "ScreenKey",
 	version = "*",
 	config = true,
+	enabled = false,
 }
