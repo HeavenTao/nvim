@@ -4,6 +4,11 @@ return {
 		vim.g.NERDCreateDefaultMappings = 0
 	end,
 	keys = {
-		{ "<leader>cc", mode = { "n", "v" }, "<Plug>NERDCommenterInvert", desc = "Commenter" },
+		{
+			"<leader>cc",
+			mode = { "n", "v" },
+			"<Plug>NERDCommenterInvert",
+			desc = "Commenter",
+		},
 	},
 }

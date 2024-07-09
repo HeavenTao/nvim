@@ -10,13 +10,6 @@ return {
 					enable = true,
 					concat = " Welcome HeavenTao!",
 				},
-				--shortcut = {
-				--{
-				--desc = " Tree",
-				--group = 'string',
-				--icon = ""
-				--},
-				--},
 				project = {
 					enable = false,
 					limit = 5,
