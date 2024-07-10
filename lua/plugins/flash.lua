@@ -1,7 +1,14 @@
 return {
 	"folke/flash.nvim",
 	event = "VeryLazy",
-	config = function() end,
+	opts = {
+		modes = {
+			--t,T,f,F
+			char = {
+				enabled = false, --会影响dt}等操作
+			},
+		},
+	},
 	keys = {
 		{
 			"s",
@@ -20,21 +27,5 @@ return {
 			end,
 			desc = "Flash Treesitter",
 		},
-		--{
-		--"r",
-		--mode = "o",
-		--function()
-		--require("flash").remote()
-		--end,
-		--desc = "Remote Flash",
-		--},
-		--{
-		--"R",
-		--mode = { "o", "x" },
-		--function()
-		--require("flash").treesitter_search()
-		--end,
-		--desc = "Treesitter Search"
-		--}
 	},
 }
