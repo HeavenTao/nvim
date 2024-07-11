@@ -3,7 +3,6 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
-	event = "VeryLazy",
 	config = function()
 		vim.diagnostic.config({ virtual_text = { prefix = "●" } })
 
@@ -15,6 +14,6 @@ return {
 		require("trouble").setup()
 	end,
 	keys = {
-		{ "<leader>e", "<Cmd>TroubleToggle<CR>", desc = "Trouble" },
+		{ "<leader>e", "<Cmd>Trouble diagnostics toggle<CR>", desc = "Trouble" },
 	},
 }

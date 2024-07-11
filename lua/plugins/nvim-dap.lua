@@ -1,5 +1,6 @@
 return {
 	"mfussenegger/nvim-dap",
+	enabled = false,
 	config = function()
 		vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg = 0, fg = "#993939" })
 		vim.api.nvim_set_hl(0, "DapStoppedLinehl", { bg = "#555530" })

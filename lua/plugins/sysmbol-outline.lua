@@ -1,6 +1,5 @@
 return {
 	"simrat39/symbols-outline.nvim",
-	lazy = true,
 	config = function()
 		require("symbols-outline").setup()
 	end,
