@@ -103,9 +103,8 @@ return {
 				},
 				lualine_z = {
 					{
-						function()
-							return os.date("%R")
-						end,
+						"datetime",
+						style = "%H:%M",
 						color = {
 							bg = "#1abc9c",
 						},
