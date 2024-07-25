@@ -4,8 +4,8 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
+				component_separators = { left = "", right = "" },
 			},
 			sections = {
 				lualine_a = { { "mode", icon = "" } },
@@ -50,7 +50,7 @@ return {
 						end,
 						icon = " ",
 						color = {
-							fg = "#9ece6a",
+							fg = "#1abc9c",
 						},
 					},
 					{
@@ -67,14 +67,20 @@ return {
 							end
 						end,
 						color = {
-							fg = "#7aa2f7",
+							fg = "#1abc9c",
 						},
 					},
 					{
 						"filetype",
+						color = {
+							fg = "#1abc9c",
+						},
 					},
 					{
 						"encoding",
+						color = {
+							fg = "#1abc9c",
+						},
 					},
 				},
 				lualine_y = {
@@ -82,7 +88,7 @@ return {
 						"progress",
 						icon = "󰠞",
 						color = {
-							bg = "#f38ba8",
+							bg = "#FF7777",
 							fg = "#1e1e2e",
 						},
 					},
@@ -90,7 +96,7 @@ return {
 						"location",
 						icon = "",
 						color = {
-							bg = "#89b4fa",
+							bg = "#41C9E2",
 							fg = "#1e1e2e",
 						},
 					},
@@ -101,7 +107,7 @@ return {
 							return os.date("%R")
 						end,
 						color = {
-							bg = "#9ece6a",
+							bg = "#1abc9c",
 						},
 						icon = " ",
 					},
