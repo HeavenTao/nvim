@@ -14,7 +14,7 @@ return {
 			start_in_insert = true,
 			persist_size = true,
 			persist_mode = true,
-			direction = "float",
+			--direction = "float",
 			close_on_exit = true,
 			auto_scroll = true,
 			shell = "fish",
