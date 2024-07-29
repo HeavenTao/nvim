@@ -28,7 +28,7 @@ return {
                     workspace = {
                         checkThirdParty = false,
                         library = {
-                            vim.env.VIMRUNTIME, lspconfig
+                            vim.env.VIMRUNTIME
                         },
                     },
                     diagnostics = {
@@ -134,13 +134,13 @@ return {
                 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
                 vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
-                --vim.api.nvim_create_autocmd("BufWritePre", {
-                --buffer = ev.buf,
-                --callback = function()
-                --vim.lsp.buf.format { bufnr = ev.buf, async = false }
-                --end
-                --})
-            end,
-        })
-    end,
+				--vim.api.nvim_create_autocmd("BufWritePre", {
+				--buffer = ev.buf,
+				--callback = function()
+				--vim.lsp.buf.format { bufnr = ev.buf, async = false }
+				--end
+				--})
+			end,
+		})
+	end,
 }
