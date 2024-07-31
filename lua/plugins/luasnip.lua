@@ -1,24 +1,29 @@
 return {
 	"L3MON4D3/LuaSnip",
+	version = "v2.*",
 	build = "make install_jsregexp",
 	event = "InsertEnter",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		config = function()
-			local paths = vim.list_extend(
-				vim.api.nvim_get_runtime_file("package.json", true),
-				vim.api.nvim_get_runtime_file("package.jsonc", true)
-			)
-			table.insert(paths, os.getenv("HOME") .. "/.config/nvim/lua/snippets/")
-			require("luasnip.loaders.from_vscode").lazy_load({
-				paths = paths,
-			})
-
-			require("luasnip").filetype_extend("lua", { "luadoc" })
-			require("luasnip").filetype_extend("javascript", { "jsdoc" })
-			require("luasnip").filetype_extend("python", { "pydoc" })
-		end,
 	},
+	config = function()
+		local paths = vim.list_extend(
+			vim.api.nvim_get_runtime_file("package.json", true),
+			vim.api.nvim_get_runtime_file("package.jsonc", true)
+		)
+		for index, value in ipairs(paths) do
+			paths[index] = vim.fn.fnamemodify(value, ":p:h")
+		end
+
+		table.insert(paths, os.getenv("HOME") .. "/.config/nvim/lua/snippets/")
+		require("luasnip.loaders.from_vscode").lazy_load({
+			paths = paths,
+		})
+
+		require("luasnip").filetype_extend("lua", { "luadoc" })
+		require("luasnip").filetype_extend("javascript", { "jsdoc" })
+		require("luasnip").filetype_extend("python", { "pydoc" })
+	end,
 	opt = {
 		history = true,
 		delete_check_events = "TextChanged",
