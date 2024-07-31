@@ -43,8 +43,8 @@ return {
 				["<C-k>"] = cmp.mapping.select_prev_item(),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- For luasnip users.
+				{ name = "nvim_lsp" },
 				{ name = "path" },
 				{ name = "codeium" },
 			}, {

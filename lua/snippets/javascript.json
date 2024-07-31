@@ -10,11 +10,5 @@
         "body": [
             "console.error($1)"
         ]
-    },
-    "import": {
-        "prefix": "im",
-        "body": [
-            "import {$2} from $1"
-        ]
     }
 }
