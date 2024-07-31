@@ -8,6 +8,14 @@
             {
                 "language": "lua",
                 "path": "lua.json"
+            },
+            {
+                "language": "javascript",
+                "path": "javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "javascript.json"
             }
         ]
     }
