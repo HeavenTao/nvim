@@ -4,3 +4,5 @@
 vim.g.mapleader = ","
 
 vim.opt.clipboard = ""
+
+vim.opt.timeoutlen = 300

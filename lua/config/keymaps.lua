@@ -3,6 +3,10 @@
 -- Add any additional keymaps here
 local map = LazyVim.safe_keymap_set
 
+-- cursor move
+map({ "n", "v" }, "g0", "^", { desc = "Move cursor to first" })
+map({ "n", "v" }, "gm", "$", { desc = "Move cursor to last" })
+
 -- esc
 map({ "i" }, "jk", "<esc>", { desc = "exit" })
 
