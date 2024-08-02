@@ -8,3 +8,7 @@ vim.opt.clipboard = ""
 vim.opt.timeoutlen = 300
 -- 弹出窗透明度
 vim.opt.pumblend = 0
+
+--neovide
+vim.g.neovide_hide_mouse_when_typing = false
+vim.g.neovide_cursor_trail_size = 0
