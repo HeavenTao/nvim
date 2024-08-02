@@ -1,0 +1,54 @@
+{
+  "new widget": {
+    "prefix": "nwd",
+    "body": [
+      "local base = require(\"wibox.widget.base\")",
+      "local gtable = require(\"gears.table\")",
+      "local wibox=require(\"wibox\")",
+      "local gears = require(\"gears\")",
+      "",
+      "local $1 = { mt = {} }",
+      "",
+      "local function new (screen)",
+      "\t$0",
+      "end",
+      "",
+      "function $1.mt:__call(...)",
+      "\treturn new (...)",
+      "end",
+      "",
+      "return setmetatable($1,$1.mt)"
+    ],
+    "description": "build a new widget code"
+  },
+  "ref widbox": {
+    "prefix": "lw",
+    "body": [
+      "local wibox = require(\"wibox\")"
+    ]
+  },
+  "ref awful": {
+    "prefix": "law",
+    "body": [
+      "local awful = require(\"awful\")"
+    ]
+  },
+  "ref base": {
+    "prefix": "lwwb",
+    "body": [
+      "local base = require(\"wibox.widget.base\")"
+    ]
+  },
+  "ref gtable": {
+    "prefix": "lgt",
+    "body": [
+      "local gtable = require(\"gears.table\")"
+    ]
+  },
+  "ref gears": {
+    "prefix": "lg",
+    "body": [
+      "local gears = require(\"gears\")"
+    ]
+  }
+}

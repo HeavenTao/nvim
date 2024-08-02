@@ -21,6 +21,11 @@ return {
         completion = {
           completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
         },
+        snippet = {
+          expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+          end,
+        },
         preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
         window = {
           completion = cmp.config.window.bordered({ side_padding = 0 }),
@@ -42,6 +47,7 @@ return {
           -- end,
         }),
         sources = cmp.config.sources({
+          { name = "luasnip" },
           { name = "nvim_lsp" },
           { name = "path" },
         }, {
