@@ -45,6 +45,24 @@ return {
           end,
           desc = "Noice All",
         },
+        {
+          "<c-f>",
+          function()
+            if not require("noice.lsp").scroll(4) then
+              return "<c-f>"
+            end
+          end,
+          { "n", "i", "s" },
+        },
+        {
+          "<c-b>",
+          function()
+            if not require("noice.lsp").scroll(-4) then
+              return "<c-b>"
+            end
+          end,
+          { "n", "i", "s" },
+        },
       }
     end,
   },
