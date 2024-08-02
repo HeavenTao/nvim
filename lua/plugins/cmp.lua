@@ -32,7 +32,6 @@ return {
           completion = cmp.config.window.bordered({
             side_padding = 0,
             col_offset = -3,
-            winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
           }),
           documentation = cmp.config.window.bordered(),
         },
