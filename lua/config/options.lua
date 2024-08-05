@@ -3,8 +3,6 @@
 -- Add any additional options here
 vim.g.mapleader = ","
 
-vim.opt.clipboard = ""
-
 vim.opt.timeoutlen = 300
 -- 弹出窗透明度
 vim.opt.pumblend = 0
