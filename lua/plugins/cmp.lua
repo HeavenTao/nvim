@@ -53,6 +53,8 @@ return {
         sources = cmp.config.sources({
           { name = "luasnip" },
           { name = "nvim_lsp" },
+          { name = "codeium" },
+          { name = "fittencode" },
           { name = "path" },
         }, {
           { name = "buffer" },
@@ -103,13 +105,14 @@ return {
             vim.api.nvim_set_hl(0, "CmpItemKindColor", { fg = "#D8EEEB", bg = "#58B5A8" })
             vim.api.nvim_set_hl(0, "CmpItemKindTypeParameter", { fg = "#D8EEEB", bg = "#58B5A8" })
 
-            vim.api.nvim_set_hl(0, "CmpItemKindCodeium", { fg = "#D8EEEB", bg = "#58B5A8" })
+            vim.api.nvim_set_hl(0, "CmpItemKindCodeium", { fg = "#D8EEEB", bg = "#6CC644" })
+            vim.api.nvim_set_hl(0, "CmpItemKindFittenCode", { fg = "#D8EEEB", bg = "#6CC644" })
 
             local kind = lspkind.cmp_format({
               mode = "symbol_text",
               maxwidth = 100,
               ellipsis_char = "...",
-              symbol_map = { Codeium = "" },
+              symbol_map = { Codeium = "", FittenCode = "" },
             })(entry, vim_item)
 
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
@@ -119,9 +122,8 @@ return {
           end,
         },
         experimental = {
-
           ghost_text = {
-            hl_group = "CmpGhostText",
+            hl_group = "NonText",
           },
         },
         sorting = defaults.sorting,
