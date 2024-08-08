@@ -33,7 +33,11 @@ return {
 			formatting = {
 				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
-					local kind = lspkind.cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+					local kind = lspkind.cmp_format({
+						mode = "symbol_text",
+						maxwidth = 50,
+						symbol_map = { FittenCode = "" },
+					})(entry, vim_item)
 					local strings = vim.split(kind.kind, "%s", { trimempty = true })
 					kind.kind = " " .. (strings[1] or "") .. " "
 					kind.menu = "    (" .. (strings[2] or "") .. ")"
@@ -54,8 +58,9 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "lazydev", group_index = 0 },
-				{ name = "nvim_lsp" },
+				{ name = "fittencode", group_index = 1 },
 				{ name = "luasnip" },
+				{ name = "nvim_lsp" },
 				{ name = "rg" },
 				{ name = "path" },
 			}, {
