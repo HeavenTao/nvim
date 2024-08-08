@@ -42,8 +42,8 @@ return {
           ["<C-k>"] = cmp.mapping.select_prev_item(),
           ["<ESC>"] = cmp.mapping.abort(),
           -- ["<C-Space>"] = cmp.mapping.complete(),
-          -- ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
-          ["<TAB>"] = LazyVim.cmp.confirm({ select = true }),
+          ["<CR>"] = LazyVim.cmp.confirm({ select = auto_select }),
+          -- ["<TAB>"] = LazyVim.cmp.confirm({ select = true }),
           -- ["<S-CR>"] = LazyVim.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           -- ["<C-CR>"] = function(fallback)
           --   cmp.abort()
@@ -54,7 +54,6 @@ return {
           { name = "luasnip" },
           { name = "nvim_lsp" },
           { name = "codeium" },
-          { name = "fittencode" },
           { name = "path" },
         }, {
           { name = "buffer" },
