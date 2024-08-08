@@ -36,7 +36,6 @@ return {
 					local kind = lspkind.cmp_format({
 						mode = "symbol_text",
 						maxwidth = 20,
-						symbol_map = { FittenCode = "" },
 					})(entry, vim_item)
 					local strings = vim.split(kind.kind, "%s", { trimempty = true })
 					kind.kind = " " .. (strings[1] or "") .. " "
@@ -58,7 +57,6 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = "lazydev", group_index = 0 },
-				{ name = "fittencode", group_index = 1 },
 				{ name = "luasnip" },
 				{ name = "nvim_lsp" },
 				{ name = "rg" },

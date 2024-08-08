@@ -24,7 +24,7 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		local ls = { "lua_ls", "cssls", "html", "jsonls", "prismals", "tsserver" }
+		local ls = { "lua_ls", "cssls", "html", "jsonls", "prismals", "tsserver", "vuels" }
 
 		for _, server in ipairs(ls) do
 			lspconfig[server].setup({
@@ -32,18 +32,18 @@ return {
 			})
 		end
 
-		lspconfig.volar.setup({
-			capabilities = capabilities,
-			filetypes = { "vue", "javascript", "typescript", "javascriptreact", "typescriptreact" },
-			init_options = {
-				vue = {
-					hybridMode = false,
-				},
-				typescript = {
-					tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
-				},
-			},
-		})
+		-- lspconfig.volar.setup({
+		-- 	capabilities = capabilities,
+		-- 	filetypes = { "vue", "javascript", "typescript", "javascriptreact", "typescriptreact" },
+		-- 	init_options = {
+		-- 		vue = {
+		-- 			hybridMode = false,
+		-- 		},
+		-- 		typescript = {
+		-- 			tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
+		-- 		},
+		-- 	},
+		-- })
 
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
