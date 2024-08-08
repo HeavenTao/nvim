@@ -18,11 +18,3 @@ map({ "n" }, "<A-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
 --save file
 map({ "i", "n", "x", "s" }, "<leader>w", "<cmd>wall<cr><esc>", { desc = "Save all file" })
-
--- comment
--- map({ "n" }, "<leader>cc", "<cmd>normal gcc<cr>", { desc = "Comment" })
-
---lazygit
-map({ "n" }, "<leader>g", function()
-  LazyVim.lazygit({ cwd = LazyVim.root.git() })
-end, { desc = "LazyGit" })

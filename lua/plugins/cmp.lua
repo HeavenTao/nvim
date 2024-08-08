@@ -33,7 +33,10 @@ return {
             side_padding = 0,
             col_offset = -3,
           }),
-          documentation = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered({
+            side_padding = 0,
+            col_offset = -3,
+          }),
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),

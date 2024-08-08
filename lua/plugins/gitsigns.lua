@@ -4,6 +4,8 @@ return {
     config = function()
       require("gitsigns").setup()
     end,
-    keys = function() end,
+    keys = function()
+      return {}
+    end,
   },
 }
