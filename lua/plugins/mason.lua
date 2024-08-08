@@ -24,7 +24,7 @@ return {
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		local ls = { "lua_ls", "cssls", "html", "jsonls", "prismals" }
+		local ls = { "lua_ls", "cssls", "html", "jsonls", "prismals", "tsserver" }
 
 		for _, server in ipairs(ls) do
 			lspconfig[server].setup({
@@ -37,7 +37,6 @@ return {
 			filetypes = { "vue", "javascript", "typescript", "javascriptreact", "typescriptreact" },
 			init_options = {
 				vue = {
-
 					hybridMode = false,
 				},
 				typescript = {
