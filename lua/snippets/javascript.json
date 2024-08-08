@@ -1,14 +1,17 @@
 {
-  "console.log": {
-    "prefix": "cl",
-    "body": [
-      "console.log($1)"
-    ]
-  },
-  "console.error": {
-    "prefix": "ce",
-    "body": [
-      "console.error($1)"
-    ]
-  }
+    "console.log": {
+        "prefix": "cl",
+
+        "body": [
+            "console.log($1)"
+        ]
+
+    },
+    "console.error": {
+        "prefix": "ce",
+        "body": [
+            "console.error($1)"
+        ]
+
+    }
 }
