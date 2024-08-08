@@ -10,6 +10,7 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
 		"onsails/lspkind.nvim",
+		"lukas-reineke/cmp-rg",
 	},
 	event = { "InsertEnter", "CmdlineEnter" },
 	config = function()
@@ -55,6 +56,7 @@ return {
 				{ name = "lazydev", group_index = 0 },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+				{ name = "rg" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "path" },
 			}, {

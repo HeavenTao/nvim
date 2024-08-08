@@ -1,5 +1,6 @@
 return {
 	"numToStr/Comment.nvim",
+	event = "VeryLazy",
 	config = function()
 		require("Comment").setup({
 			---Add a space b/w comment and the c
@@ -18,13 +19,11 @@ return {
 				line = "<leader>cc",
 
 				block = "<leader>bc",
-
 			},
 			extra = {
 				above = nil,
 				below = nil,
 				eol = nil,
-
 			},
 			mappings = {
 				---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
