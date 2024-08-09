@@ -6,7 +6,7 @@ return {
       return {
         {
           "<leader>n",
-          "<cmd>Neotree source=filesystem position=left toggle=true reveal=true<cr>",
+          "<cmd>Neotree source=filesystem position=right toggle=true reveal=true<cr>",
           desc = "Neotree",
         },
       }
