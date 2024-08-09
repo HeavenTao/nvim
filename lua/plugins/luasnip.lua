@@ -25,12 +25,7 @@ return {
       require("luasnip").filetype_extend("lua", { "luadoc" })
       require("luasnip").filetype_extend("javascript", { "jsdoc" })
       require("luasnip").filetype_extend("python", { "pydoc" })
-      require("luasnip").setup(opts)
     end,
-    opt = {
-      history = true,
-      delete_check_events = "TextChanged",
-    },
     keys = function()
       return {
         {
