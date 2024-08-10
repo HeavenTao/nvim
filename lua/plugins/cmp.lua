@@ -16,7 +16,6 @@ return {
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
 
-		vim.fn.tabpagenr()
 		cmp.setup({
 			window = {
 				completion = cmp.config.window.bordered({
