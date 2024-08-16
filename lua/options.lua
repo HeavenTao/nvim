@@ -1,6 +1,5 @@
 require "nvchad.options"
 
-vim.g.mapleader = ","
 vim.o.timeoutlen = 300
 -- add yours here!
 
