@@ -12,6 +12,10 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "folke/which-key.nvim",
+    enabled = false,
+  },
 
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
