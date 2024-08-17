@@ -79,4 +79,27 @@ return {
       { "<leader>g", "<Cmd>LazyGit<CR>", desc = "Git" },
     },
   },
+  -- Marks
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("marks").setup()
+    end,
+  },
+  --Surround
+  {
+    "kylechui/nvim-surround",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-surround").setup()
+    end,
+  },
+  --Autotag
+  {
+    "windwp/nvim-ts-autotag",
+    config=function ()
+      require("nvim-ts-autotag")
+    end
+  },
 }
