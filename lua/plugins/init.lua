@@ -26,4 +26,57 @@ return {
   -- 		},
   -- 	},
   -- },
+  -- treesj
+  {
+    "Wansmer/treesj",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    keys = { "<space>m", "<space>j", "<spance>s" },
+    config = function()
+      require("treesj").setup {
+        max_join_length = 1200,
+      }
+    end,
+  },
+  -- flash
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {
+      modes = {
+        --t,T,f,F
+        char = {
+          enabled = false, --会影响dt}等操作
+        },
+      },
+    },
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+
+        function()
+          -- default options: exact mode, multi window, all directions, with a backdrop
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+      {
+        "S",
+        mode = { "n", "o", "x" },
+
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
+    },
+  },
+  -- LazyGit
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>g", "<Cmd>LazyGit<CR>", desc = "Git" },
+    },
+  },
 }
