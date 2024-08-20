@@ -1,0 +1,14 @@
+{
+  "console.log": {
+    "prefix": "cl2",
+    "body": [
+      "console.log(`hello`,$1)"
+    ]
+  },
+  "console.error": {
+    "prefix": "ce2",
+    "body": [
+      "console.error($1)"
+    ]
+  }
+}
