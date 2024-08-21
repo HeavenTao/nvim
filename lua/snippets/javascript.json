@@ -9,5 +9,23 @@
       "\treturn cmpopt;",
       "})"
     ]
+  },
+  "bilog":{
+    "prefix":"bilog",
+    "body":[
+      "parts/scripts/bi2/bilog"
+    ]
+  },
+  "biApi":{
+    "prefix":"biapi",
+    "body":[
+      "parts/scripts/bi2/biApi"
+    ]
+  },
+  "common":{
+    "prefix":"comjs",
+    "body":[
+      "parts/scripts/bi2/common"
+    ]
   }
 }

@@ -12,6 +12,10 @@
       {
         "language": "typescript",
         "path": "javascript.json"
+      },
+      {
+        "language":"html",
+        "path":"quasar-snippets.json"
       }
     ]
   }
