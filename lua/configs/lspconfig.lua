@@ -30,6 +30,24 @@ lspconfig.tsserver.setup {
       },
     },
   },
+  settings = {
+    javascript = {
+      format = {
+        indentSize = 2,
+        tabSize = 2,
+        convertTabsToSpaces = true,
+        semicolons="insert"
+      },
+    },
+    typescript={
+      format = {
+        indentSize = 2,
+        tabSize = 2,
+        convertTabsToSpaces = true,
+        semicolons="insert"
+      },
+    }
+  },
   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
