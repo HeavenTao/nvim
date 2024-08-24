@@ -1,6 +1,8 @@
 require "nvchad.options"
 
-vim.o.timeoutlen = 300
+vim.o.ttimeoutlen = 0
+vim.o.timeout=false
+
 -- add yours here!
 
 -- local o = vim.o

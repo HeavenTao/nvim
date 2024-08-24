@@ -30,7 +30,7 @@ return {
   {
     "Wansmer/treesj",
     dependencies = { "nvim-treesitter/nvim-treesitter" },
-    keys = { "<space>m", "<space>j", "<spance>s" },
+    keys = { "<space>m" },
     config = function()
       require("treesj").setup {
         max_join_length = 1200,
@@ -98,9 +98,9 @@ return {
   --Autotag
   {
     "windwp/nvim-ts-autotag",
-    lazy=false,
-    config=function ()
+    lazy = false,
+    config = function()
       require("nvim-ts-autotag").setup()
-    end
+    end,
   },
 }
