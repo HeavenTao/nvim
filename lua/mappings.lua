@@ -23,7 +23,7 @@ map("i", "<C-k>", "<Up>", { desc = "move up" })
 
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
 
--- map("n", "<C-s>", "<cmd>w<CR>", { desc = "General Save file" })
+map("n", "<C-s>", "<cmd>wall<CR>", { desc = "General Save file" })
 -- map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General Copy whole file" })
 --
 -- map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "Toggle line number" })
