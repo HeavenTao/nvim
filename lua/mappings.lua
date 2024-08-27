@@ -5,9 +5,6 @@ local map = vim.keymap.set
 
 map("i", "jk", "<ESC>", { desc = "Normal mode" })
 
---save
--- map({ "n" }, "<leader>w", "<cmd> wall <cr>")
-
 --window dir
 map("n", "<A-l>", "<C-W>l", { desc = "Window Right" })
 map("n", "<A-h>", "<C-W>h", { desc = "Window Left" })
@@ -23,7 +20,7 @@ map("i", "<C-k>", "<Up>", { desc = "move up" })
 
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
 
-map("n", "<C-s>", "<cmd>wall<CR>", { desc = "General Save file" })
+map("n", "<leader>ww", "<cmd>wall<CR>", { desc = "General Save file" })
 -- map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General Copy whole file" })
 --
 -- map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "Toggle line number" })
