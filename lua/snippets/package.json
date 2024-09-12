@@ -14,8 +14,11 @@
         "path": "javascript.json"
       },
       {
-        "language":"html",
-        "path":"quasar-snippets.json"
+        "language": [
+          "html",
+          "vue"
+        ],
+        "path": "quasar-snippets.json"
       }
     ]
   }
