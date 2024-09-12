@@ -111,6 +111,8 @@ map({ "n", "t" }, "<C-\\>", function()
   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
 end, { desc = "terminal new horizontal term" })
 
+map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
+
 -- map({ "n", "t" }, "<A-i>", function()
 --   require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
 -- end, { desc = "terminal toggle floating term" })
