@@ -16,6 +16,8 @@
       "created:function(){",
       "\t$1",
       "},",
+      "mounted:function(){",
+      "},",
       "beforeDestroy:function(){",
       "},",
       "destroyed:function(){",
