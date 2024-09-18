@@ -10,21 +10,37 @@
       "})"
     ]
   },
-  "bilog":{
-    "prefix":"bilog",
-    "body":[
+  "vuelife": {
+    "prefix": "vlife",
+    "body": [
+      "created:function(){",
+      "\t$1",
+      "},",
+      "beforeDestroy:function(){",
+      "},",
+      "destroyed:function(){",
+      "},",
+      "activated:function(){",
+      "},",
+      "deactivated:function(){",
+      "}"
+    ]
+  },
+  "bilog": {
+    "prefix": "bilog",
+    "body": [
       "parts/scripts/bi2/bilog"
     ]
   },
-  "biApi":{
-    "prefix":"biapi",
-    "body":[
+  "biApi": {
+    "prefix": "biapi",
+    "body": [
       "parts/scripts/bi2/biApi"
     ]
   },
-  "common":{
-    "prefix":"comjs",
-    "body":[
+  "common": {
+    "prefix": "comjs",
+    "body": [
       "parts/scripts/bi2/common"
     ]
   }
