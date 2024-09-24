@@ -4,6 +4,7 @@ local options = {
     -- css = { "prettier" },
     html = { "prettier" },
     -- javascript = { "prettierd", "prettier", stop_after_first = false },
+    c = { "clang-format" },
   },
 
   format_on_save = {
