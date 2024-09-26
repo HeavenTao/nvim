@@ -45,5 +45,29 @@
     "body": [
       "parts/scripts/bi2/common"
     ]
+  },
+  "defernew":{
+    "prefix":"ndef",
+    "body":[
+      "var defer = _Q.defer();"
+    ]
+  },
+  "deferreturn":{
+   "prefix":"rdef",
+    "body":[
+      "return defer.promise;"
+    ]
+  },
+  "deferresolve":{
+    "prefix":"redef",
+    "body":[
+      "defer.resolve();"
+    ]
+  },
+  "deferreject":{
+    "prefix":"rejdef",
+    "body":[
+      "defer.reject(error);"
+    ]
   }
 }
