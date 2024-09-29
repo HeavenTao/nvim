@@ -103,6 +103,30 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
+  --dap.ui
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      local dapui, dap = require "dapui", require "dap"
+      dapui.setup()
+      dap.listeners.before.attach.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.launch.dapui_config = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated.dapui_config = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited.dapui_config = function()
+        dapui.close()
+      end
+    end,
+  },
   --dap.nvim
   {
     "mfussenegger/nvim-dap",
@@ -110,7 +134,6 @@ return {
       local mason_registry = require "mason-registry"
 
       local codelldb = mason_registry.get_package "codelldb"
-      vim.print(codelldb:get_install_path())
 
       local dap = require "dap"
       dap.adapters.codelldb = {
@@ -120,6 +143,20 @@ return {
           command = codelldb:get_install_path() .. "/extension/adapter/codelldb",
           args = { "--port", "${port}" },
         },
+        show
+      }
+
+      dap.configurations.c = {
+        {
+          name = "Launch file",
+          type = "codelldb",
+          request = "launch",
+          program = function()
+            return vim.fn.input("Path to executable", vim.fn.getcwd() .. "/", "file")
+          end,
+          cwd = "${workspaceFolder}",
+          stopOnEntry = true,
+        },
       }
     end,
     keys = {
@@ -128,7 +165,6 @@ return {
         function()
           require("dap").continue()
         end,
-        "<leader>b",
         desc = "Debugger",
       },
       {
