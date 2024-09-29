@@ -103,4 +103,41 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
+  --dap.nvim
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      local mason_registry = require "mason-registry"
+
+      local codelldb = mason_registry.get_package "codelldb"
+      vim.print(codelldb:get_install_path())
+
+      local dap = require "dap"
+      dap.adapters.codelldb = {
+        type = "server",
+        port = "${port}",
+        executable = {
+          command = codelldb:get_install_path() .. "/extension/adapter/codelldb",
+          args = { "--port", "${port}" },
+        },
+      }
+    end,
+    keys = {
+      {
+        "<F5>",
+        function()
+          require("dap").continue()
+        end,
+        "<leader>b",
+        desc = "Debugger",
+      },
+      {
+        "<leader>b",
+        function()
+          require("dap").toggle_breakpoint()
+        end,
+        desc = "set breakpoint",
+      },
+    },
+  },
 }
