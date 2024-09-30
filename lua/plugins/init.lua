@@ -132,10 +132,10 @@ return {
     "mfussenegger/nvim-dap",
     config = function()
       local mason_registry = require "mason-registry"
-
-      local codelldb = mason_registry.get_package "codelldb"
-
       local dap = require "dap"
+
+      --c or c++
+      local codelldb = mason_registry.get_package "codelldb"
       dap.adapters.codelldb = {
         type = "server",
         port = "${port}",
@@ -143,7 +143,6 @@ return {
           command = codelldb:get_install_path() .. "/extension/adapter/codelldb",
           args = { "--port", "${port}" },
         },
-        show
       }
 
       dap.configurations.c = {
@@ -156,6 +155,27 @@ return {
           end,
           cwd = "${workspaceFolder}",
           stopOnEntry = true,
+        },
+      }
+
+      --javascript
+      local jsdebug = mason_registry.get_package "js-debug-adapter"
+      dap.adapters["pwa-node"] = {
+        type = "server",
+        host = "localhost",
+        port = "${port}",
+        executable = {
+          command = "node",
+          args = { jsdebug:get_install_path() .. "/js-debug/src/dapDebugServer.js", "${port}" },
+        },
+      }
+      dap.configurations.javascript = {
+        {
+          type = "pwa-node",
+          request = "launch",
+          name = "Launch file",
+          program = "${file}",
+          cwd = "${workspaceFolder}",
         },
       }
     end,
