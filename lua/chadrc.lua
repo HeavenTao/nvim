@@ -13,18 +13,19 @@ M.base46 = {
   -- },
 }
 
-M.ui = {
-  nvdash = {
-    load_on_startup = true,
-    buttons = {
-      { "  Find File", "leader f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "leader f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "leader f w", "Telescope live_grep" },
-      { "  Bookmarks", "leader m a", "Telescope marks" },
-      { "  Themes", "leader t h", "Telescope themes" },
-      { "  Mappings", "leader c h", "NvCheatsheet" },
-    },
+M.nvdash = {
+  load_on_startup = true,
+  buttons = {
+    { txt = "  Find File", keys = "leader f f", cmd = "Telescope find_files" },
+    { txt = "󰈚  Recent Files", keys = "leader f o", cmd = "Telescope oldfiles" },
+    { txt = "󰈭  Find Word", keys = "leader f w", cmd = "Telescope live_grep" },
+    { txt = "  Bookmarks", keys = "leader m a", cmd = "Telescope marks" },
+    { txt = "  Themes", keys = "leader t h", cmd = "Telescope themes" },
+    { txt = "  Mappings", keys = "leader c h", cmd = "NvCheatsheet" },
   },
+}
+
+M.ui = {
   telescope = { style = "borderless" }, -- borderless / bordered
   tabufline = {
     enabled = true,
