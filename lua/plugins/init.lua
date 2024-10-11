@@ -104,96 +104,96 @@ return {
     end,
   },
   --dap.ui
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = {
-      "mfussenegger/nvim-dap",
-      "nvim-neotest/nvim-nio",
-    },
-    config = function()
-      local dapui, dap = require "dapui", require "dap"
-      dapui.setup()
-      dap.listeners.before.attach.dapui_config = function()
-        dapui.open()
-      end
-      dap.listeners.before.launch.dapui_config = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated.dapui_config = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited.dapui_config = function()
-        dapui.close()
-      end
-    end,
-  },
+  -- {
+  --   "rcarriga/nvim-dap-ui",
+  --   dependencies = {
+  --     "mfussenegger/nvim-dap",
+  --     "nvim-neotest/nvim-nio",
+  --   },
+  --   config = function()
+  --     local dapui, dap = require "dapui", require "dap"
+  --     dapui.setup()
+  --     dap.listeners.before.attach.dapui_config = function()
+  --       dapui.open()
+  --     end
+  --     dap.listeners.before.launch.dapui_config = function()
+  --       dapui.open()
+  --     end
+  --     dap.listeners.before.event_terminated.dapui_config = function()
+  --       dapui.close()
+  --     end
+  --     dap.listeners.before.event_exited.dapui_config = function()
+  --       dapui.close()
+  --     end
+  --   end,
+  -- },
   --dap.nvim
-  {
-    "mfussenegger/nvim-dap",
-    config = function()
-      local mason_registry = require "mason-registry"
-      local dap = require "dap"
-
-      --c or c++
-      local codelldb = mason_registry.get_package "codelldb"
-      dap.adapters.codelldb = {
-        type = "server",
-        port = "${port}",
-        executable = {
-          command = codelldb:get_install_path() .. "/extension/adapter/codelldb",
-          args = { "--port", "${port}" },
-        },
-      }
-
-      dap.configurations.c = {
-        {
-          name = "Launch file",
-          type = "codelldb",
-          request = "launch",
-          program = function()
-            return vim.fn.input("Path to executable", vim.fn.getcwd() .. "/", "file")
-          end,
-          cwd = "${workspaceFolder}",
-          stopOnEntry = true,
-        },
-      }
-
-      --javascript
-      local jsdebug = mason_registry.get_package "js-debug-adapter"
-      dap.adapters["pwa-node"] = {
-        type = "server",
-        host = "localhost",
-        port = "${port}",
-        executable = {
-          command = "node",
-          args = { jsdebug:get_install_path() .. "/js-debug/src/dapDebugServer.js", "${port}" },
-        },
-      }
-      dap.configurations.javascript = {
-        {
-          type = "pwa-node",
-          request = "launch",
-          name = "Launch file",
-          program = "${file}",
-          cwd = "${workspaceFolder}",
-        },
-      }
-    end,
-    keys = {
-      {
-        "<F5>",
-        function()
-          require("dap").continue()
-        end,
-        desc = "Debugger",
-      },
-      {
-        "<leader>b",
-        function()
-          require("dap").toggle_breakpoint()
-        end,
-        desc = "set breakpoint",
-      },
-    },
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   config = function()
+  --     local mason_registry = require "mason-registry"
+  --     local dap = require "dap"
+  --
+  --     --c or c++
+  --     local codelldb = mason_registry.get_package "codelldb"
+  --     dap.adapters.codelldb = {
+  --       type = "server",
+  --       port = "${port}",
+  --       executable = {
+  --         command = codelldb:get_install_path() .. "/extension/adapter/codelldb",
+  --         args = { "--port", "${port}" },
+  --       },
+  --     }
+  --
+  --     dap.configurations.c = {
+  --       {
+  --         name = "Launch file",
+  --         type = "codelldb",
+  --         request = "launch",
+  --         program = function()
+  --           return vim.fn.input("Path to executable", vim.fn.getcwd() .. "/", "file")
+  --         end,
+  --         cwd = "${workspaceFolder}",
+  --         stopOnEntry = true,
+  --       },
+  --     }
+  --
+  --     --javascript
+  --     local jsdebug = mason_registry.get_package "js-debug-adapter"
+  --     dap.adapters["pwa-node"] = {
+  --       type = "server",
+  --       host = "localhost",
+  --       port = "${port}",
+  --       executable = {
+  --         command = "node",
+  --         args = { jsdebug:get_install_path() .. "/js-debug/src/dapDebugServer.js", "${port}" },
+  --       },
+  --     }
+  --     dap.configurations.javascript = {
+  --       {
+  --         type = "pwa-node",
+  --         request = "launch",
+  --         name = "Launch file",
+  --         program = "${file}",
+  --         cwd = "${workspaceFolder}",
+  --       },
+  --     }
+  --   end,
+  --   keys = {
+  --     {
+  --       "<F5>",
+  --       function()
+  --         require("dap").continue()
+  --       end,
+  --       desc = "Debugger",
+  --     },
+  --     {
+  --       "<leader>b",
+  --       function()
+  --         require("dap").toggle_breakpoint()
+  --       end,
+  --       desc = "set breakpoint",
+  --     },
+  --   },
+  -- },
 }
