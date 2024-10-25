@@ -14,3 +14,5 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n","q","<cmd>close<cr>",{buffer=event.buf,silent=true,desc="Quit buffer"})
   end
 })
+
+vim.cmd("autocmd BufNewFile,BufRead * set fileformat=unix")

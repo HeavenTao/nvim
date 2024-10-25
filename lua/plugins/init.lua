@@ -16,7 +16,15 @@ return {
     "folke/which-key.nvim",
     enabled = false,
   },
-
+  {
+      "hedyhli/outline.nvim",
+      config=function ()
+        require("outline").setup()
+      end,
+    keys = {
+      { "<leader>o", "<Cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+  },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

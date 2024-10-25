@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "jsonls","clangd" }
+local servers = { "html", "cssls", "jsonls","clangd","zls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 local mason_registry = require "mason-registry"
 
