@@ -143,11 +143,13 @@ map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
 --code runner
 map("n", "<F5>", function()
   require("nvchad.term").runner {
+    id="htoggleTerm",
     pos = "sp",
     cmd = function()
       local file = vim.fn.expand "%"
+      local outfile= "./debug/" .. vim.fn.expand("%:t:r")
       local ft_cmds = {
-        c = "clang -o " .. vim.fn.expand "%:t:r" .. " -g " .. file .. " && " .. "./" .. vim.fn.expand "%:t:r",
+        c = "clang -o " .. outfile .. " -g " .. file .. " && " .. "./" .. outfile,
       }
       vim.print(ft_cmds[vim.bo.ft])
       return ft_cmds[vim.bo.ft]
