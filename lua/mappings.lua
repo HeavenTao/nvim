@@ -140,3 +140,17 @@ map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
 --   end
 -- end, { desc = "blankline jump to current context" })
 
+--code runner
+map("n", "<F5>", function()
+  require("nvchad.term").runner {
+    pos = "sp",
+    cmd = function()
+      local file = vim.fn.expand "%"
+      local ft_cmds = {
+        c = "clang -o " .. vim.fn.expand "%:t:r" .. " -g " .. file .. " && " .. "./" .. vim.fn.expand "%:t:r",
+      }
+      vim.print(ft_cmds[vim.bo.ft])
+      return ft_cmds[vim.bo.ft]
+    end,
+  }
+end, { desc = "Code Runner" })
