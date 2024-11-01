@@ -17,10 +17,24 @@ return {
     enabled = false,
   },
   {
-      "hedyhli/outline.nvim",
-      config=function ()
-        require("outline").setup()
-      end,
+    "folke/trouble.nvim",
+    cmd = "Trouble",
+    keys = {
+      {
+        "<leader>e",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Diagnostics",
+      },
+    },
+    config = function()
+      require("trouble").setup()
+    end,
+  },
+  {
+    "hedyhli/outline.nvim",
+    config = function()
+      require("outline").setup()
+    end,
     keys = {
       { "<leader>o", "<Cmd>Outline<CR>", desc = "Toggle outline" },
     },
