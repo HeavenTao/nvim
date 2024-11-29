@@ -1,7 +1,7 @@
 require "nvchad.options"
 
 vim.o.ttimeoutlen = 0
-vim.o.timeout=false
+vim.o.timeout = false
 
 -- add yours here!
 
@@ -11,4 +11,4 @@ if vim.g.neovide then
   vim.g.neovide_cursor_trail_size = 0
 end
 
-vim.g.vscode_snippets_path = vim.fn.stdpath('config') .. '/lua/snippets/'
+vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets/"
