@@ -8,6 +8,11 @@ return {
         enabled = false, --会影响dt等操作
       },
     },
+    label = {
+      rainbow = {
+        enabled = true,
+      },
+    },
   },
   keys = {
     {
