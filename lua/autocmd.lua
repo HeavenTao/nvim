@@ -9,10 +9,10 @@ vim.api.nvim_create_autocmd("FileType", {
     "help",
     "checkhealth",
   },
-  callback=function (event)
-    vim.bo[event.buf].buflisted=false
-    vim.keymap.set("n","q","<cmd>close<cr>",{buffer=event.buf,silent=true,desc="Quit buffer"})
-  end
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true, desc = "Quit buffer" })
+  end,
 })
 
-vim.cmd("autocmd BufNewFile,BufRead * set fileformat=unix")
+--vim.cmd("autocmd BufNewFile,BufRead * set fileformat=unix")

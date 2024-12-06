@@ -33,26 +33,35 @@ map("n", "<leader>fm", function()
   require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
 
---Tabline
+--buffers
 map("n", "<A-,>", function()
   require("nvchad.tabufline").prev()
-end, { desc = "Tab Left" })
+end, { desc = "Buffer Left" })
 
 map("n", "<A-.>", function()
   require("nvchad.tabufline").next()
-end, { desc = "Tab Left" })
+end, { desc = "Buffer Left" })
 
 map("n", "<A-c>", function()
   require("nvchad.tabufline").close_buffer()
-end, { desc = "Tab buffer close" })
+end, { desc = "Buffer buffer close" })
 
 map("n", "<A-[>", function()
   require("nvchad.tabufline").move_buf(-1)
-end, { desc = "Tab Move Left" })
+end, { desc = "Buffer Move Left" })
 
 map("n", "<A-]>", function()
   require("nvchad.tabufline").move_buf(1)
-end, { desc = "Tab Move Right" })
+end, { desc = "Buffer Move Right" })
+
+-- tabs
+map("n", "<A-n>", "<Cmd>tabnew<cr>", { desc = "new Tab" })
+
+for i = 1, 9, 1 do
+  map("n", string.format("<A-%s>", i), string.format("<Cmd>tabn %s<cr>", i), { desc = "switch to tab n" })
+end
+
+map("n", "<S-A-n>", "<Cmd>tabc<cr>", { desc = "Close current tab" })
 
 -- Comment
 map("n", "<leader>cc", "gcc", { desc = "Toggle Comment", remap = true })
