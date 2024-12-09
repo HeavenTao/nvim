@@ -15,6 +15,18 @@ M.nvdash = {
     { txt = "󰈭  Find Word", keys = "leader f w", cmd = "Telescope live_grep" },
     { txt = "  Themes", keys = "leader t h", cmd = "Telescope themes" },
     { txt = "  Mappings", keys = "leader c h", cmd = "NvCheatsheet" },
+    { txt = "-", hl = "NvDashFooter", no_gap = true, rep = true },
+    {
+      txt = function()
+        local stats = require("lazy").stats()
+        local ms = math.floor(stats.startuptime) .. "ms"
+
+        return "Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
+      end,
+      hl = "NvDashFooter",
+      no_gap = true,
+    },
+    { txt = "-", hl = "NvDashFooter", no_gap = true, rep = true },
   },
 }
 
