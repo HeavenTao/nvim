@@ -135,17 +135,35 @@ map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
 
 --code runner
 map("n", "<F5>", function()
-  require("nvchad.term").runner {
-    id = "htoggleTerm",
-    pos = "sp",
-    cmd = function()
-      local file = vim.fn.expand "%"
-      local outfile = "./debug/" .. vim.fn.expand "%:t:r"
-      local ft_cmds = {
-        c = "clang -o " .. outfile .. " -g " .. file .. " && " .. "./" .. outfile,
-      }
-      vim.print(ft_cmds[vim.bo.ft])
-      return ft_cmds[vim.bo.ft]
-    end,
-  }
+  if vim.bo.ft == "lua" or vim.bo.ft == "vim" then
+    local folders = vim.lsp.buf.list_workspace_folders()
+    if #folders <= 0 then
+      vim.print "echo 'no workspace folders'"
+    else
+      local paths = vim.split(folders[1], "/")
+      local pluginName = paths[#paths]
+
+      if require("lazy.core.config").plugins[pluginName]._.loaded ~= nil then
+        vim.print "reload"
+        vim.cmd("Lazy reload " .. pluginName)
+      else
+        vim.print "load"
+        vim.cmd("Lazy load " .. pluginName)
+      end
+    end
+  else
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        local file = vim.fn.expand "%"
+        local outfile = "./debug/" .. vim.fn.expand "%:t:r"
+        local ft_cmds = {
+          c = "clang -o " .. outfile .. " -g " .. file .. " && " .. "./" .. outfile,
+        }
+        vim.print(ft_cmds[vim.bo.ft])
+        return ft_cmds[vim.bo.ft]
+      end,
+    }
+  end
 end, { desc = "Code Runner" })
