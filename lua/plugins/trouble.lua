@@ -8,7 +8,5 @@ return {
       desc = "Diagnostics",
     },
   },
-  config = function()
-    require("trouble").setup()
-  end,
+  opts = {},
 }
