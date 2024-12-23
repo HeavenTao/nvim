@@ -7,6 +7,10 @@ return {
     notify = false,
   },
 
+  -- dev = {
+  --   path = "/home/ht/temp/nvim-plugins/",
+  -- },
+
   ui = {
     icons = {
       ft = "",
