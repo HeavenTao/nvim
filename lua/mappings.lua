@@ -151,7 +151,16 @@ map("n", "<F5>", function()
         vim.cmd("Lazy load " .. pluginName)
       end
     end
-  else
+  elseif vim.bo.ft == "javascript" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        local file = vim.fn.expand "%:t"
+        return "node " .. file
+      end,
+    }
+  elseif vim.bo.ft == "c" then
     require("nvchad.term").runner {
       id = "htoggleTerm",
       pos = "sp",
@@ -165,5 +174,7 @@ map("n", "<F5>", function()
         return ft_cmds[vim.bo.ft]
       end,
     }
+  else
+    vim.print "this filetype not set run command"
   end
 end, { desc = "Code Runner" })
