@@ -5,6 +5,7 @@ local options = {
     html = { "prettier" },
     javascript = { "prettierd", "prettier", stop_after_first = true },
     c = { "clang-format" },
+    nix = { "alejandra" },
   },
 
   format_on_save = {
