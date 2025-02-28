@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.cmd "autocmd BufNewFile,BufRead * set fileformat=unix"
+-- vim.cmd "autocmd BufNewFile,BufRead * set fileformat=unix"
 
 --clipboard on wsl
 -- if vim.fn.has "wsl" == 1 then
