@@ -5,6 +5,9 @@ return {
   opts = {
     defaults = {
       preview = false,
+      layout_config = {
+        width = 0.5,
+      },
     },
   },
 }
