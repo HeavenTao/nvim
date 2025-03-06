@@ -7,11 +7,11 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "javascript.json"
+        "path": "work-javascript.json"
       },
       {
         "language": "typescript",
-        "path": "javascript.json"
+        "path": "work-javascript.json"
       },
       {
         "language": [

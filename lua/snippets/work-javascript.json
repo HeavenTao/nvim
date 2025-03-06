@@ -1,4 +1,10 @@
 {
+  "vuemarkraw": {
+    "prefix": "mr",
+    "body": [
+      "vue.markRaw($1),"
+    ]
+  },
   "define": {
     "prefix": "def",
     "body": [
@@ -46,27 +52,27 @@
       "parts/scripts/bi2/common"
     ]
   },
-  "defernew":{
-    "prefix":"ndef",
-    "body":[
+  "defernew": {
+    "prefix": "ndef",
+    "body": [
       "var defer = _Q.defer();"
     ]
   },
-  "deferreturn":{
-   "prefix":"rdef",
-    "body":[
+  "deferreturn": {
+    "prefix": "rdef",
+    "body": [
       "return defer.promise;"
     ]
   },
-  "deferresolve":{
-    "prefix":"redef",
-    "body":[
+  "deferresolve": {
+    "prefix": "redef",
+    "body": [
       "defer.resolve();"
     ]
   },
-  "deferreject":{
-    "prefix":"rejdef",
-    "body":[
+  "deferreject": {
+    "prefix": "rejdef",
+    "body": [
       "defer.reject(error);"
     ]
   }
