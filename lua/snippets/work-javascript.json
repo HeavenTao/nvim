@@ -1,8 +1,14 @@
 {
   "vuemarkraw": {
-    "prefix": "mr",
+    "prefix": "vmr",
     "body": [
-      "vue.markRaw($1),"
+      "vue.markRaw($1)$2"
+    ]
+  },
+  "thismarkraw": {
+    "prefix": "tmr",
+    "body": [
+      "this.markRaw($1)$2"
     ]
   },
   "define": {
