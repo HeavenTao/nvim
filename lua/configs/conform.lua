@@ -6,7 +6,6 @@ local options = {
     javascript = { "prettierd", "prettier", stop_after_first = true },
     c = { "clang-format" },
     nix = { "alejandra" },
-    zig = { "zig" },
   },
 
   format_on_save = {
