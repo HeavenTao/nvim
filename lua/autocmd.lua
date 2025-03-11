@@ -15,6 +15,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+--zig
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.zig", "*.zon" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
+
 -- vim.cmd "autocmd BufNewFile,BufRead * set fileformat=unix"
 
 --clipboard on wsl
