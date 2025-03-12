@@ -135,6 +135,7 @@ map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
 
 --code runner
 map("n", "<F5>", function()
+  vim.cmd "write"
   if vim.bo.ft == "lua" or vim.bo.ft == "vim" then
     local folders = vim.lsp.buf.list_workspace_folders()
     if #folders <= 0 then
@@ -172,6 +173,16 @@ map("n", "<F5>", function()
         }
         vim.print(ft_cmds[vim.bo.ft])
         return ft_cmds[vim.bo.ft]
+      end,
+    }
+  elseif vim.bo.ft == "zig" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        local file = vim.fn.expand "%"
+        vim.print(file)
+        return "zig run " .. file
       end,
     }
   else
