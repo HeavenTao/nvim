@@ -1,5 +1,6 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
+local cmp = require "blink.cmp"
 
 local lspconfig = require "lspconfig"
 local utils = require "../utils"
@@ -13,7 +14,8 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+    -- capabilities = nvlsp.capabilities,
+    capabilities = cmp.get_lsp_capabilities(nvlsp.capabilities),
   }
 end
 
@@ -59,7 +61,8 @@ lspconfig.ts_ls.setup {
   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  -- capabilities = nvlsp.capabilities,
+  capabilities = cmp.get_lsp_capabilities(nvlsp.capabilities),
 }
 
 local user = os.getenv "USER"
