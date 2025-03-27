@@ -3,7 +3,7 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = { "rafamadriz/friendly-snippets" },
 
-  enabled = false,
+  enabled = true,
 
   -- use a release tag to download pre-built binaries
   version = "1.*",
@@ -15,6 +15,17 @@ return {
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
+    cmdline = {
+      enabled = true,
+      completion = {
+        menu = {
+          auto_show = true,
+        },
+      },
+      keymap = {
+        ["<Tab>"] = { "accept" },
+      },
+    },
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
     -- 'super-tab' for mappings similar to vscode (tab to accept)
     -- 'enter' for enter to accept
@@ -27,7 +38,10 @@ return {
     -- C-k: Toggle signature help (if signature.enabled = true)
     --
     -- See :h blink-cmp-config-keymap for defining your own keymap
-    keymap = { preset = "default" },
+    keymap = {
+      preset = "default",
+      ["<CR>"] = { "accept", "fallback" },
+    },
 
     appearance = {
       -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -38,14 +52,30 @@ return {
     -- (Default) Only show the documentation popup when manually triggered
     completion = {
       documentation = { auto_show = true },
+      ghost_text = { enabled = true },
     },
 
-    signature = { window = { border = "single" } },
+    signature = {
+      enabled = false,
+      window = { show_documentation = false },
+    },
 
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
+    snippets = { preset = "luasnip" },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
+      providers = {
+        buffer = {
+          opts = {
+            get_bufnrs = function()
+              return vim.tbl_filter(function(bufnr)
+                return vim.bo[bufnr].buftype == ""
+              end, vim.api.nvim_list_bufs())
+            end,
+          },
+        },
+      },
     },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
