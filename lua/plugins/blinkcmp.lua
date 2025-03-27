@@ -108,8 +108,11 @@ return {
     },
 
     signature = {
-      enabled = false,
-      window = { show_documentation = false },
+      enabled = true,
+      window = {
+        border = "single",
+        show_documentation = true,
+      },
     },
 
     -- Default list of enabled providers defined so that you can extend it
