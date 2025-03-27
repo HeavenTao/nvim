@@ -1,24 +1,29 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
-local cmp = require "blink.cmp"
 
 local lspconfig = require "lspconfig"
 local utils = require "../utils"
-
--- EXAMPLE
 local servers = { "html", "cssls", "jsonls", "clangd", "nixd" }
 local nvlsp = require "nvchad.configs.lspconfig"
+local ok, cmp = pcall(require, "blink.cmp")
+
+local capabilities = nil
+if ok then
+  capabilities = cmp.get_lsp_capabilities(nvlsp.capabilities)
+else
+  capabilities = nvlsp.capabilities
+end
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
-    -- capabilities = nvlsp.capabilities,
-    capabilities = cmp.get_lsp_capabilities(nvlsp.capabilities),
+    capabilities = capabilities,
   }
 end
 
+-- ts_ls
 local os_name = utils.get_os_name()
 local vue_language_server_path = ""
 if os_name == "nixos" then
@@ -61,10 +66,10 @@ lspconfig.ts_ls.setup {
   filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
-  -- capabilities = nvlsp.capabilities,
-  capabilities = cmp.get_lsp_capabilities(nvlsp.capabilities),
+  capabilities = capabilities,
 }
 
+-- zig
 local user = os.getenv "USER"
 lspconfig.zls.setup {
   cmd = { "/etc/profiles/per-user/" .. user .. "/bin/zls" },
