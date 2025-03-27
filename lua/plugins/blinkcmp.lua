@@ -51,8 +51,33 @@ return {
 
     -- (Default) Only show the documentation popup when manually triggered
     completion = {
-      documentation = { auto_show = true },
+      documentation = {
+        auto_show = true,
+        window = {
+          border = "single",
+        },
+      },
       ghost_text = { enabled = true },
+      menu = {
+        border = "single",
+        draw = {
+          treesitter = { "lsp" },
+          columns = { { "label" }, { "kind_icon", "kind", gap = 1 }, { "source_name", gap = 1 } },
+          -- components = {
+          --   kind_icon = {
+          --     ellipsis = false,
+          --     text = function(ctx)
+          --       return ctx.kind_icon .. ctx.icon_gap
+          --     end,
+          --     highlight = function(ctx)
+          --       vim.print(ctx.kind_hl)
+          --       return ctx.kind_hl
+          --     end,
+          --   },
+          -- },
+        },
+        scrollbar = false,
+      },
     },
 
     signature = {
