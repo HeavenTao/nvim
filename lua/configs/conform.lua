@@ -6,7 +6,7 @@ local options = {
     javascript = { "prettierd", "prettier", stop_after_first = true },
     c = { "clang-format" },
     nix = { "alejandra" },
-    cs = { "dotnet-csharpier" },
+    -- cs = { "dotnet-csharpier" },
   },
 
   format_on_save = {
