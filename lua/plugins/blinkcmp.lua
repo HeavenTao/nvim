@@ -89,15 +89,6 @@ return {
                 end
                 return icon .. ctx.icon_gap
               end,
-
-              -- Optionally, use the highlight groups from nvim-web-devicons
-              -- You can also add the same function for `kind.highlight` if you want to
-              -- keep the highlight groups in sync with the icons.
-              highlight = function(ctx)
-                local hl = ctx.kind_hl
-                vim.print(hl)
-                return hl
-              end,
             },
           },
         },
@@ -136,7 +127,7 @@ return {
     -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
     --
     -- See the fuzzy documentation for more information
-    fuzzy = { implementation = "prefer_rust_with_warning" },
+    fuzzy = { implementation = "rust" },
   },
   opts_extend = { "sources.default" },
 }
