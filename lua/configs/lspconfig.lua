@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 local utils = require "../utils"
-local servers = { "html", "cssls", "jsonls", "clangd", "nixd" }
+local servers = { "html", "cssls", "jsonls", "clangd", "nixd", "csharp_ls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 local ok, cmp = pcall(require, "blink.cmp")
 
