@@ -5,4 +5,6 @@ vim.lsp.enable {
   "json",
   "clangd",
   "nix",
+  "lua",
+  "ts",
 }
