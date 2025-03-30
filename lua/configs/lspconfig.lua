@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 local utils = require "../utils"
-local servers = { "html", "cssls", "jsonls", "clangd", "nixd" } --csharp_ls
+local servers = { "nixd" } --csharp_ls
 local nvlsp = require "nvchad.configs.lspconfig"
 local ok, cmp = pcall(require, "blink.cmp")
 
@@ -67,16 +67,4 @@ lspconfig.ts_ls.setup {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = capabilities,
-}
-
--- zig
-local user = os.getenv "USER"
-lspconfig.zls.setup {
-  cmd = { "/etc/profiles/per-user/" .. user .. "/bin/zls" },
-  settings = {
-    zls = {
-      semantic_tokens = "partial",
-      zig_exe_path = "/etc/profiles/per-user/" .. user .. "/bin/zig",
-    },
-  },
 }
