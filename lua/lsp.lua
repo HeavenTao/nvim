@@ -1,3 +1,4 @@
+dofile(vim.g.base46_cache .. "lsp")
 vim.lsp.enable {
   "zig",
   "html",

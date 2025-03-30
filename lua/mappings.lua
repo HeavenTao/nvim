@@ -16,14 +16,15 @@ map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
 map("i", "<C-e>", "<End>", { desc = "move end of line" })
 map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
-map("i", "<C-j>", "<Down>", { desc = "move down" })
-map("i", "<C-k>", "<Up>", { desc = "move up" })
 
 --Clear highlights
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General Clear highlights" })
 
 --Save all
 map("n", "<leader>ww", "<cmd>wall<CR>", { desc = "General Save file" })
+
+--close neovim
+map("n", "<leader>qq", "<cmd>qall<CR>", { desc = "Close neovim" })
 
 --NvCheatsheet
 map("n", "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "Toggle nvcheatsheet" })
