@@ -18,3 +18,9 @@ vim.g.zig_fmt_autosave = 0
 
 --snippets
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets/"
+
+--diagnostic
+vim.diagnostic.config {
+  virtual_lines = true,
+  virtual_text = false,
+}
