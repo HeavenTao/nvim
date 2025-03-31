@@ -20,17 +20,17 @@ vim.g.zig_fmt_autosave = 0
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets/"
 
 --diagnostic
-local x = vim.diagnostic.severity
-vim.diagnostic.config {
-  virtual_lines = false,
-  virtual_text = true,
-  signs = {
-    text = {
-      [x.ERROR] = "󰅙",
-      [x.WARN] = "",
-      [x.INFO] = "󰋼",
-      [x.HINT] = "󰌵",
-    },
-  },
-  underline = true,
-}
+-- local x = vim.diagnostic.severity
+-- vim.diagnostic.config {
+--   virtual_lines = false,
+--   virtual_text = true,
+--   signs = {
+--     text = {
+--       [x.ERROR] = "󰅙",
+--       [x.WARN] = "",
+--       [x.INFO] = "󰋼",
+--       [x.HINT] = "󰌵",
+--     },
+--   },
+--   underline = true,
+-- }
