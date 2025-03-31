@@ -1,14 +1,6 @@
-local utils = require "../utils"
-local os_name = utils.get_os_name()
 local vue_language_server_path = ""
-if os_name == "nixos" then
-  local user = os.getenv "USER"
-  vue_language_server_path = "/etc/profiles/per-user/" .. user .. "/bin/vue-language-server"
-else
-  local mason_registry = require "mason-registry"
-  vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
-    .. "/node_modules/@vue/language-server"
-end
+local user = os.getenv "USER"
+vue_language_server_path = "/etc/profiles/per-user/" .. user .. "/bin/vue-language-server"
 
 return {
   cmd = { "typescript-language-server", "--stdio" },
@@ -19,6 +11,7 @@ return {
     "typescript",
     "typescriptreact",
     "typescript.tsx",
+    "vue",
   },
   root_markers = {
     "tsconfig.json",
@@ -33,7 +26,7 @@ return {
       {
         name = "@vue/typescript-plugin",
         location = vue_language_server_path,
-        languages = { "vue" },
+        languages = { "vue", "javascript", "typescript" },
       },
     },
   },
