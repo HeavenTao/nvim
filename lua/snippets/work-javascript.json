@@ -1,0 +1,85 @@
+{
+  "vuemarkraw": {
+    "prefix": "vmr",
+    "body": [
+      "vue.markRaw($1)$2"
+    ]
+  },
+  "thismarkraw": {
+    "prefix": "tmr",
+    "body": [
+      "this.markRaw($1)$2"
+    ]
+  },
+  "define": {
+    "prefix": "def",
+    "body": [
+      "define([\"vue\",\"quasar\"],function(vue,quasar){",
+      "\tvar cmpopt={",
+      "\t\tname:\"$1\"",
+      "\t}",
+      "\treturn cmpopt;",
+      "})"
+    ]
+  },
+  "vuelife": {
+    "prefix": "vlife",
+    "body": [
+      "created:function(){",
+      "\t$1",
+      "},",
+      "mounted:function(){",
+      "},",
+      "beforeDestroy:function(){",
+      "},",
+      "destroyed:function(){",
+      "},",
+      "activated:function(){",
+      "},",
+      "deactivated:function(){",
+      "}"
+    ]
+  },
+  "bilog": {
+    "prefix": "bilog",
+    "body": [
+      "parts/scripts/bi2/bilog"
+    ]
+  },
+  "biApi": {
+    "prefix": "biapi",
+    "body": [
+      "parts/scripts/bi2/biApi"
+    ]
+  },
+  "common": {
+    "prefix": "comjs",
+    "body": [
+      "parts/scripts/bi2/common"
+    ]
+  },
+  "defernew": {
+    "prefix": "ndef",
+    "body": [
+      "var defer = _Q.defer();"
+    ]
+  },
+  "deferreturn": {
+    "prefix": "rdef",
+    "body": [
+      "return defer.promise;"
+    ]
+  },
+  "deferresolve": {
+    "prefix": "redef",
+    "body": [
+      "defer.resolve();"
+    ]
+  },
+  "deferreject": {
+    "prefix": "rejdef",
+    "body": [
+      "defer.reject(error);"
+    ]
+  }
+}

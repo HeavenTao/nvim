@@ -1,0 +1,25 @@
+{
+  "name": "my-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "work-javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "work-javascript.json"
+      },
+      {
+        "language": [
+          "html",
+          "vue"
+        ],
+        "path": "quasar-snippets.json"
+      }
+    ]
+  }
+}
