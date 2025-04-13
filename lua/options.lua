@@ -3,6 +3,7 @@ require "nvchad.options"
 vim.o.ttimeoutlen = 0
 vim.o.timeout = false
 vim.o.scrolloff = 5
+vim.o.showcmd = false
 
 -- add yours here!
 

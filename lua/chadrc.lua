@@ -42,9 +42,32 @@ M.ui = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "treesitter", "cwd", "cursor" },
+    order = {
+      "mode",
+      "file",
+      "git",
+      "%=",
+      "lsp_msg",
+      "%=",
+      "diagnostics",
+      "lsp",
+      "treesitter",
+      "cwd",
+      "line_percent",
+      "cursor",
+      "date",
+    },
     separator_style = "default",
     modules = {
+      date = function()
+        return "%#PmenuSel# " .. os.date "%H:%M" .. " "
+      end,
+      line_percent = function()
+        local current_line = vim.fn.line "."
+        local all_line = vim.fn.line "$"
+        local percent = current_line / all_line * 100
+        return "%#St_pos_sep#" .. string.format("%4d", percent) .. "%% "
+      end,
       treesitter = function()
         if not package.loaded["nvim-treesitter"] then
           return ""
