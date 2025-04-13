@@ -62,6 +62,7 @@ return {
     -- (Default) Only show the documentation popup when manually triggered
     completion = {
       documentation = {
+        treesitter_highlighting = false,
         auto_show = true,
         window = {
           border = "rounded",
@@ -101,6 +102,7 @@ return {
       window = {
         border = "rounded",
         show_documentation = true,
+        treesitter_highlighting = false,
       },
     },
 
