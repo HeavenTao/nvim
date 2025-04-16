@@ -7,6 +7,7 @@ local opts = {
     },
     keymap = {
       ["<Tab>"] = { "accept" },
+      ["<Enter>"] = { "accept_and_enter", "fallback" },
     },
   },
   completion = {

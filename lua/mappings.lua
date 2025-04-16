@@ -5,6 +5,9 @@ local map = vim.keymap.set
 
 map("i", "jk", "<ESC>", { desc = "Normal mode" })
 
+map("n", "g0", "g^", { desc = "move to head" })
+map("n", "gm", "g$", { desc = "move to end" })
+
 --window dir
 map("n", "<A-l>", "<C-W>l", { desc = "Window Right" })
 map("n", "<A-h>", "<C-W>h", { desc = "Window Left" })

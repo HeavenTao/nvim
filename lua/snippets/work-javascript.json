@@ -81,5 +81,17 @@
     "body": [
       "defer.reject(error);"
     ]
+  },
+  "console.time": {
+    "prefix": "ct",
+    "body": [
+      "console.time(\"$1\");"
+    ]
+  },
+  "console.timeEnd": {
+    "prefix": "cte",
+    "body": [
+      "console.timeEnd(\"$1\");"
+    ]
   }
 }
