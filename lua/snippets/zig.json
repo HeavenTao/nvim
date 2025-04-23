@@ -1,0 +1,8 @@
+{
+  "const": {
+    "prefix": "cst",
+    "body": [
+      "const $1"
+    ]
+  }
+}

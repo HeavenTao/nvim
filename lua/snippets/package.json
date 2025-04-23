@@ -19,6 +19,10 @@
           "vue"
         ],
         "path": "quasar-snippets.json"
+      },
+      {
+        "language": "zig",
+        "path": "zig.json"
       }
     ]
   }
