@@ -13,11 +13,13 @@ return {
       {
         -- snippet plugin
         "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp",
         dependencies = "rafamadriz/friendly-snippets",
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
         config = function(_, opts)
           require("luasnip").config.set_config(opts)
-          require "nvchad.configs.luasnip"
+          require "../configs.luasnip"
         end,
       },
       {

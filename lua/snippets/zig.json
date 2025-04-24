@@ -4,5 +4,11 @@
     "body": [
       "const $1"
     ]
+  },
+  "allocator": {
+    "prefix": "alo",
+    "body": [
+      "allocator"
+    ]
   }
 }

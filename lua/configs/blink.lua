@@ -1,4 +1,7 @@
 local opts = {
+  keymap = {
+    preset = "enter",
+  },
   cmdline = {
     completion = {
       menu = {
