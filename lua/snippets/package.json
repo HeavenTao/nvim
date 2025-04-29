@@ -6,11 +6,17 @@
   "contributes": {
     "snippets": [
       {
-        "language": "javascript",
+        "language": [
+          "javascript",
+          "html"
+        ],
         "path": "work-javascript.json"
       },
       {
-        "language": "typescript",
+        "language": [
+          "typescript",
+          "html"
+        ],
         "path": "work-javascript.json"
       },
       {

@@ -93,5 +93,11 @@
     "body": [
       "console.timeEnd(\"$1\");"
     ]
+  },
+  "vuetempalte": {
+    "prefix": "vte",
+    "body": [
+      "_vue_template_"
+    ]
   }
 }
