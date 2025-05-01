@@ -43,7 +43,7 @@ return {
         "zip",
         "zipPlugin",
         "tutor",
-        "rplugin",
+        -- "rplugin",
         "syntax",
         "synmenu",
         "optwin",

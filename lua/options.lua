@@ -35,3 +35,4 @@ vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets/"
 --   },
 --   underline = true,
 -- }
+vim.g.loaded_node_provider = nil
