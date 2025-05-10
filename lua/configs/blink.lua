@@ -1,6 +1,6 @@
 local opts = {
   keymap = {
-    preset = "enter",
+    preset = "super-tab",
   },
   cmdline = {
     completion = {

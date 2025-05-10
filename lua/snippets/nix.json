@@ -1,0 +1,14 @@
+{
+  "nixpkgs": {
+    "prefix": "pkg",
+    "body": [
+      "github:nixos/nixpkgs?ref=nixos-24.11"
+    ]
+  },
+  "unstable-nixpkgs": {
+    "prefix": "unpkg",
+    "body": [
+      "github:nixos/nixpkgs/nixpkgs-unstable"
+    ]
+  }
+}

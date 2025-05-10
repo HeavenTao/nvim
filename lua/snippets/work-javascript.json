@@ -40,28 +40,10 @@
       "}"
     ]
   },
-  "bilog": {
-    "prefix": "bilog",
-    "body": [
-      "parts/scripts/bi2/bilog"
-    ]
-  },
-  "biApi": {
-    "prefix": "biapi",
-    "body": [
-      "parts/scripts/bi2/biApi"
-    ]
-  },
-  "common": {
-    "prefix": "comjs",
-    "body": [
-      "parts/scripts/bi2/common"
-    ]
-  },
   "defernew": {
     "prefix": "ndef",
     "body": [
-      "var defer = _Q.defer();"
+      "let defer = _Q.defer();"
     ]
   },
   "deferreturn": {
@@ -80,18 +62,6 @@
     "prefix": "rejdef",
     "body": [
       "defer.reject(error);"
-    ]
-  },
-  "console.time": {
-    "prefix": "ct",
-    "body": [
-      "console.time(\"$1\");"
-    ]
-  },
-  "console.timeEnd": {
-    "prefix": "cte",
-    "body": [
-      "console.timeEnd(\"$1\");"
     ]
   },
   "vuetempalte": {
