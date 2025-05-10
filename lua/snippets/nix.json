@@ -2,7 +2,7 @@
   "nixpkgs": {
     "prefix": "pkg",
     "body": [
-      "github:nixos/nixpkgs?ref=nixos-24.11"
+      "https://github.com/NixOS/nixpkgs/tarball/nixos-24.11"
     ]
   },
   "unstable-nixpkgs": {
