@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 local utils = require "../utils"
-local servers = { "html", "cssls", "jsonls", "clangd", "nixd", "yamlls" } --csharp_ls
+local servers = { "html", "cssls", "jsonls", "clangd", "yamlls" } --csharp_ls
 local nvlsp = require "nvchad.configs.lspconfig"
 local ok, cmp = pcall(require, "blink.cmp")
 
@@ -77,6 +77,29 @@ lspconfig.zls.setup {
     zls = {
       semantic_tokens = "partial",
       zig_exe_path = "/etc/profiles/per-user/" .. user .. "/bin/zig",
+    },
+  },
+}
+
+-- nixd
+lspconfig.nixd.setup {
+  cmd = { "nixd" },
+  settings = {
+    nixd = {
+      nixpkgs = {
+        expr = "import <nixpkgs> {}",
+      },
+      formatting = {
+        command = { "nixfmt" },
+      },
+      options = {
+        nixos = {
+          expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+        },
+        home_manager = {
+          expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+        },
+      },
     },
   },
 }
