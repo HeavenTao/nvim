@@ -1,6 +1,8 @@
 local opts = {
   keymap = {
     preset = "enter",
+    ["<Tab>"] = { "snippet_forward", "fallback" },
+    ["<CR>"] = { "select_and_accept", "fallback" },
   },
   cmdline = {
     completion = {
@@ -16,6 +18,12 @@ local opts = {
   completion = {
     documentation = {
       treesitter_highlighting = false,
+    },
+    list = {
+      selection = {
+        preselect = true,
+        auto_insert = true,
+      },
     },
   },
   signature = {
