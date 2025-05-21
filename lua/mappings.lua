@@ -3,7 +3,11 @@
 -- add yours here
 local map = vim.keymap.set
 
-map("i", "jk", "<ESC>", { desc = "Normal mode" })
+-- map("i", "jk", "<ESC>", { desc = "Normal mode" })
+map("i", "jk", function()
+  vim.cmd "stopinsert"
+  require("luasnip").unlink_current()
+end, { desc = "Normal Mode", silent = true })
 
 map("n", "g0", "g^", { desc = "move to head" })
 map("n", "gm", "g$", { desc = "move to end" })
