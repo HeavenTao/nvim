@@ -12,6 +12,11 @@ end, { desc = "Normal Mode", silent = true })
 map("n", "g0", "g^", { desc = "move to head" })
 map("n", "gm", "g$", { desc = "move to end" })
 
+--hover
+map("n", "K", function()
+  vim.lsp.buf.hover { border = "single" }
+end, { desc = "Show Hover" })
+
 --window dir
 map("n", "<A-l>", "<C-W>l", { desc = "Window Right" })
 map("n", "<A-h>", "<C-W>h", { desc = "Window Left" })
