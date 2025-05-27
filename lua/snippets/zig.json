@@ -10,5 +10,11 @@
     "body": [
       "allocator"
     ]
+  },
+  "import expect": {
+    "prefix": "exp",
+    "body": [
+      "const expect=std.testing.expect;$1"
+    ]
   }
 }
