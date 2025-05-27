@@ -55,13 +55,9 @@ M.ui = {
       "cwd",
       "line_percent",
       "cursor",
-      "date",
     },
     separator_style = "default",
     modules = {
-      date = function()
-        return "%#PmenuSel# " .. os.date "%H:%M" .. " "
-      end,
       line_percent = function()
         local current_line = vim.fn.line "."
         local all_line = vim.fn.line "$"
