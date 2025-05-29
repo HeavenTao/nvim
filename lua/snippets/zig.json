@@ -16,5 +16,29 @@
     "body": [
       "const expect=std.testing.expect;$1"
     ]
+  },
+  "u8": {
+    "prefix": "u8",
+    "body": [
+      "u8"
+    ]
+  },
+  "u16": {
+    "prefix": "u16",
+    "body": [
+      "u16"
+    ]
+  },
+  "u32": {
+    "prefix": "u32",
+    "body": [
+      "u32"
+    ]
+  },
+  "array": {
+    "prefix": "arr",
+    "body": [
+      "[$1]$2"
+    ]
   }
 }

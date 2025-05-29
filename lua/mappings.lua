@@ -9,6 +9,14 @@ map("i", "jk", function()
   require("luasnip").unlink_current()
 end, { desc = "Normal Mode", silent = true })
 
+-- luasnip choice
+map({ "i", "s" }, "<C-e>", function()
+  local ls = require "luasnip"
+  if ls.choice_active() then
+    ls.change_choice(1)
+  end
+end, { desc = "luasnip choice" })
+
 map("n", "g0", "g^", { desc = "move to head" })
 map("n", "gm", "g$", { desc = "move to end" })
 
@@ -24,8 +32,6 @@ map("n", "<A-j>", "<C-W>j", { desc = "Window Down" })
 map("n", "<A-k>", "<C-W>k", { desc = "Window Up" })
 
 --edit move
-map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
-map("i", "<C-e>", "<End>", { desc = "move end of line" })
 map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
 
