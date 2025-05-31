@@ -93,6 +93,41 @@
     ],
     "description": ""
   },
+  "f16": {
+    "prefix": "f16",
+    "body": [
+      "f16"
+    ],
+    "description": ""
+  },
+  "f32": {
+    "prefix": "f32",
+    "body": [
+      "f32"
+    ],
+    "description": ""
+  },
+  "f64": {
+    "prefix": "f64",
+    "body": [
+      "f64"
+    ],
+    "description": ""
+  },
+  "f80": {
+    "prefix": "f80",
+    "body": [
+      "f80"
+    ],
+    "description": ""
+  },
+  "f128": {
+    "prefix": "f128",
+    "body": [
+      "f128"
+    ],
+    "description": ""
+  },
   "array": {
     "prefix": "arr",
     "body": [
