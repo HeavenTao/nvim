@@ -14,26 +14,84 @@
   "import expect": {
     "prefix": "exp",
     "body": [
-      "const expect=std.testing.expect;$1"
+      "const expect = std.testing.expect;$1"
+    ]
+  },
+  "import print": {
+    "prefix": "prt",
+    "body": [
+      "const print = std.debug.print;$1"
     ]
   },
   "u8": {
     "prefix": "u8",
     "body": [
       "u8"
-    ]
+    ],
+    "description": "0~255"
   },
   "u16": {
     "prefix": "u16",
     "body": [
       "u16"
-    ]
+    ],
+    "description": "0~65535"
   },
   "u32": {
     "prefix": "u32",
     "body": [
       "u32"
-    ]
+    ],
+    "description": "0~4294967295"
+  },
+  "u64": {
+    "prefix": "u64",
+    "body": [
+      "u64"
+    ],
+    "description": "0~18446744073709551615"
+  },
+  "u128": {
+    "prefix": "u128",
+    "body": [
+      "u128"
+    ],
+    "description": ""
+  },
+  "i8": {
+    "prefix": "i8",
+    "body": [
+      "i8"
+    ],
+    "description": "-128~127"
+  },
+  "i16": {
+    "prefix": "i16",
+    "body": [
+      "i16"
+    ],
+    "description": "-32768~32767"
+  },
+  "i32": {
+    "prefix": "i32",
+    "body": [
+      "i32"
+    ],
+    "description": "-2147483648~2147483647"
+  },
+  "i64": {
+    "prefix": "i64",
+    "body": [
+      "i64"
+    ],
+    "description": ""
+  },
+  "i128": {
+    "prefix": "i128",
+    "body": [
+      "i128"
+    ],
+    "description": ""
   },
   "array": {
     "prefix": "arr",

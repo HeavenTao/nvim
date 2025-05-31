@@ -22,7 +22,7 @@ local opts = {
     list = {
       selection = {
         preselect = true,
-        auto_insert = true,
+        auto_insert = false,
       },
     },
   },
