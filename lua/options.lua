@@ -23,3 +23,9 @@ vim.g.zig_fmt_autosave = 0
 vim.g.vscode_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets/"
 
 vim.g.loaded_node_provider = nil
+
+--clipboard
+local tmux = os.getenv "TMUX"
+if tmux then
+  vim.g.clipboard = "tmux"
+end
