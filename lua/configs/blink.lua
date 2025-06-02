@@ -9,6 +9,12 @@ local opts = {
       menu = {
         auto_show = true,
       },
+      list = {
+        selection = {
+          preselect = false,
+          auto_insert = false,
+        },
+      },
     },
     keymap = {
       ["<Tab>"] = { "accept" },
