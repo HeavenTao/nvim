@@ -23,7 +23,7 @@ local opts = {
   },
   completion = {
     documentation = {
-      treesitter_highlighting = false,
+      treesitter_highlighting = true,
     },
     list = {
       selection = {
@@ -34,7 +34,7 @@ local opts = {
   },
   signature = {
     window = {
-      treesitter_highlighting = false,
+      treesitter_highlighting = true,
     },
   },
 }
