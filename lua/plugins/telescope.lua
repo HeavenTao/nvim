@@ -8,6 +8,7 @@ return {
       layout_config = {
         width = 0.5,
       },
+      file_ignore_patterns = { "^obj/", "^bin/" },
     },
   },
 }
