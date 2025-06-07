@@ -2,13 +2,10 @@ return {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.8",
   dependencies = { "nvim-lua/plenary.nvim" },
-  opts = {
-    defaults = {
-      preview = false,
-      layout_config = {
-        width = 0.5,
-      },
-      file_ignore_patterns = { "^obj/", "^bin/" },
-    },
-  },
+  opts = function()
+    local myConfig = require "configs.telescope"
+    local config = require "nvchad.configs.telescope"
+    local result = vim.tbl_deep_extend("force", myConfig, config)
+    return result
+  end,
 }
