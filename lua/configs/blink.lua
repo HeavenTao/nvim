@@ -11,7 +11,13 @@ local opts = {
       },
       list = {
         selection = {
-          preselect = false,
+          preselect = function()
+            local type = vim.fn.getcmdtype()
+            if type == ":" then
+              return true
+            end
+            return false
+          end,
           auto_insert = false,
         },
       },
