@@ -54,11 +54,17 @@ end, { desc = "General Format file" })
 
 --buffers
 map("n", "<A-,>", function()
-  require("nvchad.tabufline").prev()
+  local cur_buf = vim.api.nvim_get_current_buf()
+  if vim.bo[cur_buf].buftype ~= "terminal" then
+    require("nvchad.tabufline").prev()
+  end
 end, { desc = "Buffer Left" })
 
 map("n", "<A-.>", function()
-  require("nvchad.tabufline").next()
+  local cur_buf = vim.api.nvim_get_current_buf()
+  if vim.bo[cur_buf].buftype ~= "terminal" then
+    require("nvchad.tabufline").next()
+  end
 end, { desc = "Buffer Left" })
 
 map("n", "<A-c>", function()
