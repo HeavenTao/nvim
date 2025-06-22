@@ -210,6 +210,15 @@ map("n", "<F5>", function()
         return "zig run " .. file
       end,
     }
+  elseif vim.bo.ft == "zsh" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        local file = vim.fn.expand "%"
+        return "zsh " .. file
+      end,
+    }
   else
     vim.print "this filetype not set run command"
   end
