@@ -9,6 +9,7 @@ return {
       },
     },
     label = {
+      uppercase = false,
       rainbow = {
         enabled = true,
       },
