@@ -2,8 +2,10 @@ return {
   "m4xshen/hardtime.nvim",
   lazy = false,
   dependencies = { "MunifTanjim/nui.nvim" },
-  opts = {},
-  config = function()
-    require("hardtime").setup()
+  opts = {
+    max_count = 10,
+  },
+  config = function(_, opt)
+    require("hardtime").setup(opt)
   end,
 }
