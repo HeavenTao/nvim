@@ -5,7 +5,7 @@ return {
   opts = {
     max_count = 10,
     disabled_filetypes = {
-      lazy = false,
+      lazy = true,
       ["Outline"] = true,
     },
   },
