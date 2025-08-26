@@ -7,6 +7,7 @@ return {
     disabled_filetypes = {
       lazy = true,
       ["Outline"] = true,
+      markdown = true,
     },
   },
   config = function(_, opt)

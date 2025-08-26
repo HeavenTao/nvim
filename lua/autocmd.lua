@@ -34,3 +34,45 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 --     end,
 --   })
 -- end
+
+--user command
+vim.api.nvim_create_user_command("Build", function(args)
+  vim.cmd "write"
+  if vim.bo.ft == "zig" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        return "zig build;echo '\nrun build.' "
+      end,
+      clear_cmd = false,
+    }
+  end
+end, { desc = "build current project" })
+
+vim.api.nvim_create_user_command("Run", function(args)
+  vim.cmd "write"
+  if vim.bo.ft == "zig" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        return "zig build run"
+      end,
+    }
+  end
+end, { desc = "run current file" })
+
+vim.api.nvim_create_user_command("Test", function(args)
+  vim.cmd "write"
+  if vim.bo.ft == "zig" then
+    require("nvchad.term").runner {
+      id = "htoggleTerm",
+      pos = "sp",
+      cmd = function()
+        local file = vim.fn.expand "%"
+        return "zig test " .. file
+      end,
+    }
+  end
+end, { desc = "test current file" })

@@ -159,3 +159,8 @@ map("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal exit terminal mode" })
 --     end
 --   end
 -- end, { desc = "blankline jump to current context" })
+--
+-- code runner
+map({ "n" }, "<leader>bb", "<cmd>Build<cr>", { desc = "Build zig" })
+map({ "n" }, "<leader>br", "<cmd>Run<cr>", { desc = "Run zig" })
+map({ "n" }, "<leader>bt", "<cmd>Test<cr>", { desc = "Test zig" })
