@@ -43,7 +43,7 @@ vim.api.nvim_create_user_command("Build", function(args)
       id = "htoggleTerm",
       pos = "sp",
       cmd = function()
-        return "zig build;echo '\nrun build.' "
+        return "zig build;echo 'Run Build.' "
       end,
       clear_cmd = false,
     }
