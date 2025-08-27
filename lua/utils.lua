@@ -18,4 +18,25 @@ _M.get_os_name = function()
   return nil
 end
 
+_M.get_current_test_name = function()
+  local node = vim.treesitter.get_node()
+  if not node then
+    return nil
+  end
+
+  while node do
+    if node:type() == "test_declaration" then
+      for child in node:iter_children() do
+        if child:type() == "string" then
+          local name = vim.treesitter.get_node_text(child, 0)
+          return name
+        end
+      end
+    end
+    node = node:parent()
+  end
+
+  return nil
+end
+
 return _M

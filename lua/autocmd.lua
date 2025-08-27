@@ -71,7 +71,15 @@ vim.api.nvim_create_user_command("Test", function(args)
       pos = "sp",
       cmd = function()
         local file = vim.fn.expand "%"
-        return "zig test " .. file
+        local cmd = "zig test " .. file
+        local utils = require "utils"
+        local test_name = utils.get_current_test_name()
+        if test_name ~= nil then
+          cmd = cmd .. " --test-filter " .. test_name .. ";echo 'Run Unit Test:'" .. test_name
+        else
+          cmd = cmd .. ";echo 'Run All Unit Test'"
+        end
+        return cmd
       end,
     }
   end
