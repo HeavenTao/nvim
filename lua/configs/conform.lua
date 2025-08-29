@@ -7,6 +7,7 @@ local options = {
     javascript = { "prettierd", "prettier", stop_after_first = true },
     c = { "clang-format" },
     nix = { "alejandra" },
+    vue = { "prettierd", "prettier", stop_after_first = true },
     -- cs = { "dotnet-csharpier" },
   },
 
