@@ -41,7 +41,8 @@ vim.api.nvim_create_user_command("Build", function(args)
   if vim.bo.ft == "zig" then
     require("nvchad.term").runner {
       id = "htoggleTerm",
-      pos = "sp",
+      pos = "vsp",
+      size = 0.3,
       cmd = function()
         return "clear;zig build;echo 'Run Build.' "
       end,
@@ -54,7 +55,8 @@ vim.api.nvim_create_user_command("Run", function(args)
   if vim.bo.ft == "zig" then
     require("nvchad.term").runner {
       id = "htoggleTerm",
-      pos = "sp",
+      pos = "vsp",
+      size = 0.3,
       cmd = function()
         return "clear;zig build run"
       end,
@@ -67,7 +69,8 @@ vim.api.nvim_create_user_command("Test", function(args)
   if vim.bo.ft == "zig" then
     require("nvchad.term").runner {
       id = "htoggleTerm",
-      pos = "sp",
+      pos = "vsp",
+      size = 0.3,
       cmd = function()
         local file = vim.fn.expand "%"
         local cmd = "zig test " .. file
