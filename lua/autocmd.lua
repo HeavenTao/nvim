@@ -43,9 +43,8 @@ vim.api.nvim_create_user_command("Build", function(args)
       id = "htoggleTerm",
       pos = "sp",
       cmd = function()
-        return "zig build;echo 'Run Build.' "
+        return "clear;zig build;echo 'Run Build.' "
       end,
-      clear_cmd = false,
     }
   end
 end, { desc = "build current project" })
@@ -57,7 +56,7 @@ vim.api.nvim_create_user_command("Run", function(args)
       id = "htoggleTerm",
       pos = "sp",
       cmd = function()
-        return "zig build run"
+        return "clear;zig build run"
       end,
     }
   end
@@ -79,7 +78,7 @@ vim.api.nvim_create_user_command("Test", function(args)
         else
           cmd = cmd .. ";echo 'Run All Unit Test'"
         end
-        return cmd
+        return "clear;" .. cmd
       end,
     }
   end
