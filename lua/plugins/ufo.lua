@@ -1,0 +1,16 @@
+return {
+  "kevinhwang91/nvim-ufo",
+  event = "VeryLazy",
+  dependencies = { "kevinhwang91/promise-async" },
+  config = function()
+    require("ufo").setup {
+      provider_selector = function(bufnr, filetype, buftype)
+        return { "treesitter", "indent" }
+      end,
+    }
+  end,
+  keys = {
+    { "zc", "<cmd>foldclose<cr>", desc = "fold Close" },
+    { "zo", "<cmd>foldopen<cr>", desc = "fold Open" },
+  },
+}
