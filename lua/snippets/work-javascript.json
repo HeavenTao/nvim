@@ -11,6 +11,37 @@
       "this.markRaw($1)$2"
     ]
   },
+  "defineComp": {
+    "prefix": "comp",
+    "body": [
+      "<template>",
+      "\t<div></div>",
+      "</template>",
+      "",
+      "<script>",
+      "\tdefine(['vue','quasar'],function(vue,quasar){",
+      "\tvar cmpopt={",
+      "\t\tname: '$1',",
+      "\t\ttemplate:_vue_template_,",
+      "\t\tprops:{",
+      "\t\t\twebroot:String,",
+      "\t\t\tviewSize:Object",
+      "\t\t},",
+      "\t\tdata:function(){",
+      "\t\t\treturn {",
+      "\t\t};",
+      "\t\t},",
+      "\t\tmethods:{",
+      "\t\t\tgetRoot:function(){",
+      "\t\t\treturn this.webroot||quasar.webroot",
+      "\t\t\t},",
+      "\t\t},",
+      "\t}",
+      "\treturn cmpopt;",
+      "})",
+      "</script>"
+    ]
+  },
   "define": {
     "prefix": "def",
     "body": [
@@ -20,24 +51,6 @@
       "\t}",
       "\treturn cmpopt;",
       "})"
-    ]
-  },
-  "vuelife": {
-    "prefix": "vlife",
-    "body": [
-      "created:function(){",
-      "\t$1",
-      "},",
-      "mounted:function(){",
-      "},",
-      "beforeDestroy:function(){",
-      "},",
-      "destroyed:function(){",
-      "},",
-      "activated:function(){",
-      "},",
-      "deactivated:function(){",
-      "}"
     ]
   },
   "defernew": {
