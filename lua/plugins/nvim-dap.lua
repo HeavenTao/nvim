@@ -48,6 +48,18 @@ return {
         args = {},
       },
     }
+
+    dap.configurations.c = {
+      name = "Launch",
+      type = "codelldb",
+      requrest = "launch",
+      program = function()
+        return vim.fn.input("Path to executeable:", vim.fn.getcwd() .. "/", "file")
+      end,
+      cwd = "${workspaceFolder}",
+      stopOnEntry = false,
+      args = {},
+    }
   end,
   keys = {
     {
