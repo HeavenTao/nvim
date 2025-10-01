@@ -10,6 +10,7 @@ vim.o.scrolloff = 5
 vim.o.showcmd = true
 vim.o.relativenumber = true
 vim.o.cursorlineopt = "both"
+vim.o.numberwidth = 4
 
 -- add yours here!
 

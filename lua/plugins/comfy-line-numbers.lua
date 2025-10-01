@@ -1,7 +1,7 @@
 return {
   "mluders/comfy-line-numbers.nvim",
   lazy = false,
-  enabled = false,
+  enabled = true,
   config = function()
     require("comfy-line-numbers").setup {
       labels = {
