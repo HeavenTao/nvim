@@ -6,6 +6,7 @@ vim.lsp.enable "cssls"
 vim.lsp.enable "html"
 vim.lsp.enable "clangd"
 vim.lsp.enable "jsonls"
+vim.lsp.enable "yamlls"
 
 vim.lsp.config["ts_ls"] = {
   filetypes = { "vue", "javascript" },

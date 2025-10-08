@@ -9,6 +9,7 @@ local options = {
     nix = { "alejandra" },
     vue = { "prettierd", "prettier", stop_after_first = true },
     -- cs = { "dotnet-csharpier" },
+    yaml = { "yamlfmt" },
   },
 
   format_on_save = {
