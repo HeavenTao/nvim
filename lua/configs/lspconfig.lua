@@ -2,6 +2,8 @@
 local nvlsp = require "nvchad.configs.lspconfig"
 nvlsp.defaults()
 
+vim.lsp.inlay_hint.enable()
+
 vim.lsp.enable "cssls"
 vim.lsp.enable "html"
 vim.lsp.enable "clangd"
