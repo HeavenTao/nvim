@@ -10,6 +10,12 @@ vim.lsp.enable "clangd"
 vim.lsp.enable "jsonls"
 vim.lsp.enable "yamlls"
 
+vim.lsp.config["bashls"] = {
+  cmd = { "bash-language-server", "start" },
+  filetypes = { "bash", "sh" },
+}
+vim.slp.enable "bashls"
+
 vim.lsp.config["ts_ls"] = {
   filetypes = { "vue", "javascript" },
 }
