@@ -10,6 +10,7 @@ local options = {
     vue = { "prettierd", "prettier", stop_after_first = true },
     -- cs = { "dotnet-csharpier" },
     yaml = { "yamlfmt" },
+    sh = { "shfmt" },
   },
 
   format_on_save = {
