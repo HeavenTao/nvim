@@ -4,7 +4,7 @@ local options = {
     -- css = { "prettier" },
     html = { "prettier" },
     cshtml = { "prettier" },
-    javascript = { "prettierd", "prettier", stop_after_first = true },
+    javascript = { "prettier", stop_after_first = true },
     c = { "clang-format" },
     nix = { "alejandra" },
     vue = { "prettierd", "prettier", stop_after_first = true },
