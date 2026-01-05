@@ -104,3 +104,20 @@ vim.api.nvim_create_user_command("Test", function(args)
     }
   end
 end, { desc = "test current file" })
+
+vim.api.nvim_create_user_command("ToggleAIChat", function(args)
+  require("nvchad.term").toggle {
+    id = "AIChat",
+    pos = "float",
+    float_opts = {
+      row = 0.05,
+      col = 0.1,
+      width = 0.8,
+      height = 0.8,
+      border = "rounded",
+    },
+    cmd = function()
+      return "iflow"
+    end,
+  }
+end, { desc = "ToggleAIChat" })
