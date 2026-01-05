@@ -117,7 +117,7 @@ vim.api.nvim_create_user_command("ToggleAIChat", function(args)
       border = "rounded",
     },
     cmd = function()
-      return "iflow"
+      return "qwen"
     end,
   }
 end, { desc = "ToggleAIChat" })
