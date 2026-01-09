@@ -54,6 +54,10 @@ map("n", "<leader>fm", function()
   require("conform").format { lsp_fallback = true }
 end, { desc = "General Format file" })
 
+map("v", "<kEqual>", function()
+  require("conform").format { lsp_fallback = true }
+end, { desc = "Format File" })
+
 --buffers
 map("n", "<A-,>", function()
   local cur_buf = vim.api.nvim_get_current_buf()
