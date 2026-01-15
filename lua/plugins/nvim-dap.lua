@@ -32,7 +32,7 @@ return {
       type = "server",
       port = "${port}",
       executable = {
-        command = "codelldb",
+        command = vim.env.CODE_LLDB_PATH,
         args = { "--port", "${port}" },
       },
     }
