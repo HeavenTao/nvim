@@ -78,21 +78,21 @@ return {
       end,
     },
     {
-      "<F10>",
+      "<Down>",
       function()
         local dap = require "dap"
         dap.step_over()
       end,
     },
     {
-      "<F11>",
+      "<Right>",
       function()
         local dap = require "dap"
         dap.step_into()
       end,
     },
     {
-      "<F12>",
+      "<Left>",
       function()
         local dap = require "dap"
         dap.step_out()
