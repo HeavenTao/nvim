@@ -19,8 +19,6 @@ end, { desc = "luasnip choice" })
 
 map("n", "g0", "g^", { desc = "move to head" })
 map("n", "gm", "g$", { desc = "move to end" })
-map("n", "<c-j>", "<c-e>", { desc = "move down" })
-map("n", "<c-k>", "<c-y>", { desc = "move up" })
 
 --hover
 map("n", "K", function()
