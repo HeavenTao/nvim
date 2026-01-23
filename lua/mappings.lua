@@ -167,13 +167,36 @@ map({ "n" }, "<leader>bb", "<cmd>Build<cr>", { desc = "Build zig" })
 map({ "n" }, "<leader>br", "<cmd>Run<cr>", { desc = "Run zig" })
 map({ "n" }, "<leader>bt", "<cmd>Test<cr>", { desc = "Test zig" })
 map({ "n", "t" }, "<F2>", "<cmd>ToggleAIChat<cr>", { desc = "ToggleAIChat" })
-map({ "n" }, "<leader>tt", function()
+
+--trans
+map({ "v" }, "<leader>tt", function()
+  vim.cmd "normal! y"
+  local start_pos = vim.api.nvim_buf_get_mark(0, "<")
+  local end_pos = vim.api.nvim_buf_get_mark(0, ">")
+
+  local lines = vim.api.nvim_buf_get_lines(0, start_pos[1] - 1, end_pos[1], false)
+  local text = table.concat(lines, ".")
+
+  local temp_path = os.tmpname()
+
+  local file, err = io.open(temp_path, "w")
+  if not file then
+    return nil
+  end
+
+  file:write(text)
+  file:close()
+
   require("nvchad.term").runner {
     id = "Trans",
     pos = "bo vsp",
-    size = 0.4,
+    size = 0.3,
+    clear_cmd = false,
     cmd = function()
-      return ""
+      return "cat "
+        .. temp_path
+        .. " | qwen -p '翻译此文档,先输出原文,不要包含注释字符,再输出翻译,输出内容中不要包含注释字符' ;rm "
+        .. temp_path
     end,
   }
 end, { desc = "Trans" })
