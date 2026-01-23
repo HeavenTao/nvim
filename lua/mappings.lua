@@ -167,3 +167,13 @@ map({ "n" }, "<leader>bb", "<cmd>Build<cr>", { desc = "Build zig" })
 map({ "n" }, "<leader>br", "<cmd>Run<cr>", { desc = "Run zig" })
 map({ "n" }, "<leader>bt", "<cmd>Test<cr>", { desc = "Test zig" })
 map({ "n", "t" }, "<F2>", "<cmd>ToggleAIChat<cr>", { desc = "ToggleAIChat" })
+map({ "n" }, "<leader>tt", function()
+  require("nvchad.term").runner {
+    id = "Trans",
+    pos = "bo vsp",
+    size = 0.4,
+    cmd = function()
+      return ""
+    end,
+  }
+end, { desc = "Trans" })
