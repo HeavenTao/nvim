@@ -11,6 +11,11 @@ local options = {
     -- cs = { "dotnet-csharpier" },
     yaml = { "yamlfmt" },
     sh = { "shfmt" },
+    python = {
+      "ruff_fix",
+      "ruff_format",
+      "ruff_organize_imports",
+    },
   },
 
   format_on_save = {

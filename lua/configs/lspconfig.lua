@@ -38,3 +38,12 @@ vim.lsp.config["zig"] = {
   },
 }
 vim.lsp.enable "zig"
+
+--python
+vim.lsp.config("ruff", {})
+vim.lsp.enable "ruff"
+
+vim.lsp.config("ty", {
+  settings = {},
+})
+vim.lsp.enable "ty"
