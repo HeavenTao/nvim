@@ -2,7 +2,7 @@
 local nvlsp = require "nvchad.configs.lspconfig"
 nvlsp.defaults()
 
-vim.lsp.inlay_hint.enable()
+-- vim.lsp.inlay_hint.enable()
 
 vim.lsp.enable "cssls"
 vim.lsp.enable "html"
@@ -15,12 +15,6 @@ vim.lsp.config["bashls"] = {
   filetypes = { "bash", "sh" },
 }
 vim.lsp.enable "bashls"
-
-vim.lsp.config["ts_ls"] = {
-  filetypes = { "vue", "javascript" },
-}
-
-vim.lsp.enable "ts_ls"
 
 vim.lsp.enable "nil_ls"
 
@@ -47,3 +41,13 @@ vim.lsp.config("ty", {
   settings = {},
 })
 vim.lsp.enable "ty"
+
+--vue_ls
+local tsserver_filetypes = { "typescript", "javascript", "vue" }
+local ts_ls_config = {
+  init_options = {},
+  filetypes = tsserver_filetypes,
+}
+
+vim.lsp.config("ts_ls", ts_ls_config)
+vim.lsp.enable { "ts_ls", "vue_ls" }
