@@ -1,4 +1,10 @@
 {
+  "const": {
+    "prefix": "cst",
+    "body": [
+      "const $1"
+    ]
+  },
   "vuemarkraw": {
     "prefix": "vmr",
     "body": [
