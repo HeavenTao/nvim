@@ -43,7 +43,7 @@ vim.lsp.config("ty", {
 vim.lsp.enable "ty"
 
 --vue_ls
-local tsserver_filetypes = { "typescript", "javascript", "vue" }
+local tsserver_filetypes = { "typescript", "javascript", "vue", "typescriptreact" }
 local ts_ls_config = {
   init_options = {},
   filetypes = tsserver_filetypes,
