@@ -3,6 +3,8 @@ local opts = {
     preset = "enter",
     ["<Tab>"] = { "snippet_forward", "fallback" },
     ["<CR>"] = { "select_and_accept", "fallback" },
+    ["<c-k>"] = { "scroll_documentation_up", "fallback" },
+    ["<c-j>"] = { "scroll_documentation_down", "fallback" },
   },
   cmdline = {
     completion = {
