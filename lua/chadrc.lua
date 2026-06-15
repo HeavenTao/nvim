@@ -65,12 +65,14 @@ M.ui = {
         return "%#St_pos_sep#" .. string.format("%4d", percent) .. "%% "
       end,
       treesitter = function()
-        if not package.loaded["nvim-treesitter"] then
+        local buf = vim.api.nvim_get_current_buf()
+        local ft = vim.bo[buf].filetype
+        if ft == "" then
           return ""
         end
-        local parsers = require "nvim-treesitter.parsers"
-        local has_parser = parsers.has_parser(parsers.get_buf_lang(vim.api.nvim_get_current_buf()))
-        if has_parser then
+        -- pcall(inspect) 只在 parser 二进制真正安装时才成功
+        local ok = pcall(vim.treesitter.language.inspect, ft)
+        if ok then
           return "%#Special# 󰈈  "
         else
           return "%#Special# 󰈉  "
