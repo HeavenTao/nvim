@@ -15,6 +15,28 @@ vim.o.numberwidth = 4
 
 -- add yours here!
 
+-- Match prettier tabWidth=4 for JS/TS/HTML/CSS/Vue files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "jsonc",
+    "html",
+    "css",
+    "scss",
+    "vue",
+  },
+  callback = function()
+    vim.bo.shiftwidth = 4
+    vim.bo.tabstop = 4
+    vim.bo.softtabstop = 4
+    vim.bo.expandtab = true
+  end,
+})
+
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 if vim.g.neovide then
