@@ -64,6 +64,15 @@ M.ui = {
         local percent = current_line / all_line * 100
         return "%#St_pos_sep#" .. string.format("%4d", percent) .. "%% "
       end,
+      cursor = function()
+        local line = vim.fn.line "."
+        local col = vim.fn.virtcol "."
+        -- 行号宽度 = 总行数的位数（同一 buffer 内恒定，不同文件自适应）
+        local line_w = #tostring(vim.fn.line "$")
+        -- 列宽至少 3 位，并跟随行宽，保证永不截断
+        local col_w = math.max(3, line_w)
+        return string.format("%%#StText# Ln %" .. line_w .. "d, Col %" .. col_w .. "d ", line, col)
+      end,
       treesitter = function()
         local buf = vim.api.nvim_get_current_buf()
         local ft = vim.bo[buf].filetype
@@ -83,7 +92,7 @@ M.ui = {
 }
 
 M.lsp = {
-  signature = false,
+  signature = true,
 }
 
 return M
