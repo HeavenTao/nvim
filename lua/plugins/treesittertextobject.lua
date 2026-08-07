@@ -67,20 +67,20 @@ return {
         require("nvim-treesitter-textobjects.select").select_textobject("@call.inner", "textobjects")
       end,
     },
-    {
-      "ah",
-      mode = { "x", "o" },
-      function()
-        require("nvim-treesitter-textobjects.select").select_textobject("@assignment.lhs", "textobjects")
-      end,
-    },
-    {
-      "al",
-      mode = { "x", "o" },
-      function()
-        require("nvim-treesitter-textobjects.select").select_textobject("@assignment.rhs", "textobjects")
-      end,
-    },
+    -- {
+    --   "ah",
+    --   mode = { "x", "o" },
+    --   function()
+    --     require("nvim-treesitter-textobjects.select").select_textobject("@assignment.lhs", "textobjects")
+    --   end,
+    -- },
+    -- {
+    --   "al",
+    --   mode = { "x", "o" },
+    --   function()
+    --     require("nvim-treesitter-textobjects.select").select_textobject("@assignment.rhs", "textobjects")
+    --   end,
+    -- },
     {
       "ac",
       mode = { "x", "o" },
@@ -100,6 +100,20 @@ return {
       mode = { "x", "o" },
       function()
         require("nvim-treesitter-textobjects.select").select_textobject("@conditional.outer", "textobjects")
+      end,
+    },
+    {
+      "ip",
+      mode = { "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.select").select_textobject("@parameter.inner", "textobjects")
+      end,
+    },
+    {
+      "ap",
+      mode = { "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.select").select_textobject("@parameter.outer", "textobjects")
       end,
     },
     {
