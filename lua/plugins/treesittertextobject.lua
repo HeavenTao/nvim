@@ -67,20 +67,6 @@ return {
         require("nvim-treesitter-textobjects.select").select_textobject("@call.inner", "textobjects")
       end,
     },
-    -- {
-    --   "ah",
-    --   mode = { "x", "o" },
-    --   function()
-    --     require("nvim-treesitter-textobjects.select").select_textobject("@assignment.lhs", "textobjects")
-    --   end,
-    -- },
-    -- {
-    --   "al",
-    --   mode = { "x", "o" },
-    --   function()
-    --     require("nvim-treesitter-textobjects.select").select_textobject("@assignment.rhs", "textobjects")
-    --   end,
-    -- },
     {
       "ac",
       mode = { "x", "o" },
@@ -117,17 +103,45 @@ return {
       end,
     },
     {
-      "]]",
+      "]m",
       mode = { "n", "x", "o" },
       function()
         require("nvim-treesitter-textobjects.move").goto_next_start("@function.outer", "textobjects")
       end,
     },
     {
-      "[[",
+      "[m",
       mode = { "n", "x", "o" },
       function()
         require("nvim-treesitter-textobjects.move").goto_previous_start("@function.outer", "textobjects")
+      end,
+    },
+    {
+      "]]",
+      mode = { "n", "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.move").goto_next_start("@parameter.inner", "textobjects")
+      end,
+    },
+    {
+      "[[",
+      mode = { "n", "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.move").goto_previous_start("@parameter.inner", "textobjects")
+      end,
+    },
+    {
+      ";",
+      mode = { "n", "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.repeatable_move").repeat_last_move_next()
+      end,
+    },
+    {
+      ",",
+      mode = { "n", "x", "o" },
+      function()
+        require("nvim-treesitter-textobjects.repeatable_move").repeat_last_move_previous()
       end,
     },
   },
