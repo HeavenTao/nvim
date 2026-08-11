@@ -52,3 +52,8 @@ local ts_ls_config = {
 vim.lsp.config("ts_ls", ts_ls_config)
 vim.lsp.enable { "ts_ls", "vue_ls" }
 vim.lsp.enable { "neocmake" }
+
+vim.lsp.config("lemminx", {
+  filetypes = { "xml", "xsd", "xsl", "xslt", "svg", "ui" },
+})
+vim.lsp.enable "lemminx"
