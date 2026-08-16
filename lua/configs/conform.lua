@@ -18,6 +18,7 @@ local options = {
       "ruff_format",
       "ruff_organize_imports",
     },
+    xml = { "xmlstarlet" },
   },
 
   format_on_save = {
