@@ -28,6 +28,25 @@ return {
       ui.close()
     end
 
+    dap.adapters["pwa-node"] = {
+      type = "server",
+      host = "localhost",
+      port = "${port}",
+      executable = {
+        command = "node",
+        args = { os.getenv "VSCODE_JS_DEBUG" .. "/lib/node_modules/js-debug/dist/src/dapDebugServer.js", "${port}" },
+      },
+    }
+    dap.configurations.javascript = {
+      {
+        type = "pwa-node",
+        request = "launch",
+        name = "Launch file",
+        program = "${file}",
+        cwd = "${workspaceFolder}",
+      },
+    }
+
     dap.adapters.codelldb = {
       type = "server",
       port = "${port}",
