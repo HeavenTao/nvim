@@ -42,7 +42,7 @@ vim.lsp.config("ty", {
 })
 vim.lsp.enable "ty"
 
-vim.lsp.enable "tsgo"
+vim.lsp.enable "tsc"
 -- vim.lsp.enable "vue_ls"
 vim.lsp.enable { "neocmake" }
 
