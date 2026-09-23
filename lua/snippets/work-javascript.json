@@ -1,98 +1,99 @@
 {
-  "const": {
-    "prefix": "cst",
-    "body": [
-      "const $1"
-    ]
-  },
-  "vuemarkraw": {
-    "prefix": "vmr",
-    "body": [
-      "vue.markRaw($1)$2"
-    ]
-  },
-  "thismarkraw": {
-    "prefix": "tmr",
-    "body": [
-      "this.markRaw($1)$2"
-    ]
-  },
-  "defineComp": {
-    "prefix": "comp",
-    "body": [
-      "<template>",
-      "\t<div></div>",
-      "</template>",
-      "",
-      "<script>",
-      "\tdefine(['vue','quasar'],function(vue,quasar){",
-      "\tvar cmpopt={",
-      "\t\tname: '$1',",
-      "\t\ttemplate:_vue_template_,",
-      "\t\tprops:{",
-      "\t\t\twebroot:String,",
-      "\t\t\tviewSize:Object",
-      "\t\t},",
-      "\t\tdata:function(){",
-      "\t\t\treturn {",
-      "\t\t};",
-      "\t\t},",
-      "\t\tmethods:{",
-      "\t\t\tgetRoot:function(){",
-      "\t\t\treturn this.webroot||quasar.webroot",
-      "\t\t\t},",
-      "\t\t},",
-      "\t}",
-      "\treturn cmpopt;",
-      "})",
-      "</script>"
-    ]
-  },
-  "define": {
-    "prefix": "def",
-    "body": [
-      "define([\"vue\",\"quasar\"],function(vue,quasar){",
-      "\tvar cmpopt={",
-      "\t\tname:\"$1\"",
-      "\t}",
-      "\treturn cmpopt;",
-      "})"
-    ]
-  },
-  "defernew": {
-    "prefix": "ndef",
-    "body": [
-      "let defer = _Q.defer();"
-    ]
-  },
-  "deferreturn": {
-    "prefix": "rdef",
-    "body": [
-      "return defer.promise;"
-    ]
-  },
-  "deferresolve": {
-    "prefix": "redef",
-    "body": [
-      "defer.resolve();"
-    ]
-  },
-  "deferreject": {
-    "prefix": "rejdef",
-    "body": [
-      "defer.reject(error);"
-    ]
-  },
-  "vuetempalte": {
-    "prefix": "vte",
-    "body": [
-      "_vue_template_"
-    ]
-  },
-  "vuecomponents": {
-    "prefix": "regcomps",
-    "body": [
-      "components: quasar.regComp([$1]),"
-    ]
-  }
+    "const": {
+        "prefix": "cst",
+        "body": [
+            "const $1"
+        ]
+    },
+    "vuemarkraw": {
+        "prefix": "vmr",
+        "body": [
+            "vue.markRaw($1)$2"
+        ]
+    },
+    "thismarkraw": {
+        "prefix": "tmr",
+        "body": [
+            "this.markRaw($1)$2"
+        ]
+    },
+    "defineComp": {
+        "prefix": "comp",
+        "body": [
+            "<template>",
+            "\t<div></div>",
+            "</template>",
+            "",
+            "<script>",
+            "\tdefine(['vue','quasar'],function(vue,quasar){",
+            "\tvar cmpopt={",
+            "\t\tname: '$1',",
+            "\t\ttemplate:_vue_template_,",
+            "\t\tprops:{",
+            "\t\t\twebroot:String,",
+            "\t\t\tviewSize:Object",
+            "\t\t},",
+            "\t\tdata:function(){",
+            "\t\t\treturn {",
+            "\t\t};",
+            "\t\t},",
+            "\t\tmethods:{",
+            "\t\t\tgetRoot:function(){",
+            "\t\t\treturn this.webroot||quasar.webroot",
+            "\t\t\t},",
+            "\t\t},",
+            "\t}",
+            "\treturn cmpopt;",
+            "})",
+            "</script>"
+        ]
+    },
+    "define": {
+        "prefix": "def",
+        "body": [
+            "define([\"vue\",\"quasar\"],function(vue,quasar){",
+            "\tvar cmpopt={",
+            "\t\tname:\"$1\",",
+            "\t\ttemplate:_vue_template_",
+            "\t}",
+            "\treturn cmpopt;",
+            "})"
+        ]
+    },
+    "defernew": {
+        "prefix": "ndef",
+        "body": [
+            "let defer = _Q.defer();"
+        ]
+    },
+    "deferreturn": {
+        "prefix": "rdef",
+        "body": [
+            "return defer.promise;"
+        ]
+    },
+    "deferresolve": {
+        "prefix": "redef",
+        "body": [
+            "defer.resolve();"
+        ]
+    },
+    "deferreject": {
+        "prefix": "rejdef",
+        "body": [
+            "defer.reject(error);"
+        ]
+    },
+    "vuetempalte": {
+        "prefix": "vte",
+        "body": [
+            "_vue_template_"
+        ]
+    },
+    "vuecomponents": {
+        "prefix": "regcomps",
+        "body": [
+            "components: quasar.regComp([$1]),"
+        ]
+    }
 }
