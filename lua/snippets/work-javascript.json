@@ -95,5 +95,22 @@
         "body": [
             "components: quasar.regComp([$1]),"
         ]
+    },
+    "createdialog": {
+        "prefix": "ndia",
+        "body": [
+            "var purl = '$1';",
+            "var asyncCmp = funcs.resolveComp('tvue!' + purl);",
+            "quasar.Dialog.create({",
+            "\ttitle: '$2',",
+            "\tcomponent: dialogView,",
+            "\tparent: this,",
+            "\tcmptype: asyncCmp,",
+            "\tcmpdata: {",
+            "\t\tviewSize: { w: 0, h: 0 },",
+            "\t\twebroot: this.getRoot(),",
+            "\t}",
+            "}).onOk(function () {}.bind(this));"
+        ]
     }
 }
