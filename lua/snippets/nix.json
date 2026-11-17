@@ -2,13 +2,13 @@
     "nixpkgs": {
         "prefix": "pkg",
         "body": [
-            "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst"
+            "github:NixOS/nixpkgs/nixos-26.05"
         ]
     },
     "unstable-nixpkgs": {
         "prefix": "unpkg",
         "body": [
-            "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
+            "github:NixOS/nixpkgs/nixos-unstable"
         ]
     }
 }
