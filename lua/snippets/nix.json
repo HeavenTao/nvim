@@ -1,14 +1,14 @@
 {
-  "nixpkgs": {
-    "prefix": "pkg",
-    "body": [
-      "https://github.com/NixOS/nixpkgs/tarball/nixos-24.11"
-    ]
-  },
-  "unstable-nixpkgs": {
-    "prefix": "unpkg",
-    "body": [
-      "github:nixos/nixpkgs/nixpkgs-unstable"
-    ]
-  }
+    "nixpkgs": {
+        "prefix": "pkg",
+        "body": [
+            "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst"
+        ]
+    },
+    "unstable-nixpkgs": {
+        "prefix": "unpkg",
+        "body": [
+            "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
+        ]
+    }
 }
