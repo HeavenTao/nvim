@@ -56,6 +56,9 @@ map("v", "<kEqual>", function()
   require("conform").format { lsp_fallback = true }
 end, { desc = "Format File" })
 
+--Code_action
+map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "Code_action" })
+
 --buffers
 map("n", "<A-,>", function()
   local cur_buf = vim.api.nvim_get_current_buf()
